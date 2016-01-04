@@ -1,0 +1,32 @@
+07.12.2014 00:16:40
+swr#database
+
+There shall be an sqlite database. Database pseudoschema:
+- object
+    - id: int
+    - type: object_type
+    - name: str
+
+- object_generalization
+    - id: int
+    - subject: object
+    - generalization: object
+    
+- object_property
+    - id: int
+    - subject: object
+    - property: object
+
+object.name shall be indexed.
+
+Software shall store information of real life objects in this
+database.
+
+Software shall add new objects to table 'object'.
+Software shall add new generalizations to table 'object_generalization'.
+Software shall add new object properties to table 'object_property'.
+Software shall delete objects and associations that are determined not
+to be valid in reality.
+
+Last update:
+08.12.2014 22:16:29
