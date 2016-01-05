@@ -30,6 +30,9 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add option="-std=c++11" />
+					<Add option="-Wextra" />
+					<Add option="-Wall" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -39,6 +42,16 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="data/schema.sql" />
+		<Unit filename="design/requirements/swr_database.txt">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="design/requirements/swr_implementation-language.txt">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="design/requirements/swr_learning.txt">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
 		<Unit filename="src/ak.cxx" />
 		<Unit filename="src/dbobject.cxx" />
 		<Unit filename="src/dbobject.hxx" />
