@@ -3,6 +3,8 @@ CREATE TABLE `object` (
     'name' COLLATE NOCASE NOT NULL
 );
 
+CREATE UNIQUE INDEX obj_name ON `object`(name);
+
 
 CREATE TABLE `object_generalization` (
     'id' INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
