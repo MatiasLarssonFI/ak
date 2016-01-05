@@ -1,0 +1,18 @@
+CREATE TABLE `object` (
+    'id' INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+    'name' COLLATE NOCASE NOT NULL
+);
+
+
+CREATE TABLE `object_generalization` (
+    'id' INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+    'subject' INTEGER REFERENCES `object`(id) ON DELETE CASCADE,
+    'generalization' INTEGER REFERENCES `object`(id) ON DELETE CASCADE
+);
+
+
+CREATE TABLE `object_property` (
+    'id' INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+    'subject' INTEGER REFERENCES `object`(id) ON DELETE CASCADE,
+    'property' INTEGER REFERENCES `object`(id) ON DELETE CASCADE
+);
