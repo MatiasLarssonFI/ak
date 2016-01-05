@@ -4,14 +4,13 @@ swr#database
 There shall be an sqlite database. Database pseudoschema:
 - object
     - id: int
-    - type: object_type
     - name: str
 
 - object_generalization
     - id: int
     - subject: object
     - generalization: object
-    
+
 - object_property
     - id: int
     - subject: object
@@ -27,6 +26,3 @@ Software shall add new generalizations to table 'object_generalization'.
 Software shall add new object properties to table 'object_property'.
 Software shall delete objects and associations that are determined not
 to be valid in reality.
-
-Last update:
-08.12.2014 22:16:29
