@@ -1,0 +1,112 @@
+# depslib dependency file v1.0
+1451937112 source:/home/matias/C_CPP/Projektit/AK/src/ak.cxx
+	<iostream>
+	<stdexcept>
+	<SQLiteCpp/SQLiteCpp.h>
+
+1451935889 /home/matias/C_CPP/Projektit/AK/src/lib/SQLiteCpp/include//SQLiteCpp/SQLiteCpp.h
+	<SQLiteCpp/Assertion.h>
+	<SQLiteCpp/Exception.h>
+	<SQLiteCpp/Database.h>
+	<SQLiteCpp/Statement.h>
+	<SQLiteCpp/Column.h>
+	<SQLiteCpp/Transaction.h>
+
+1451935889 /home/matias/C_CPP/Projektit/AK/src/lib/SQLiteCpp/include//SQLiteCpp/Assertion.h
+	<cassert>
+
+1451935889 /home/matias/C_CPP/Projektit/AK/src/lib/SQLiteCpp/include//SQLiteCpp/Exception.h
+	<stdexcept>
+	<string>
+
+1451935889 /home/matias/C_CPP/Projektit/AK/src/lib/SQLiteCpp/include//SQLiteCpp/Database.h
+	<sqlite3.h>
+	<SQLiteCpp/Column.h>
+	<string>
+
+1451935889 /home/matias/C_CPP/Projektit/AK/src/lib/SQLiteCpp/include//SQLiteCpp/Column.h
+	<sqlite3.h>
+	<SQLiteCpp/Statement.h>
+	<SQLiteCpp/Exception.h>
+	<string>
+
+1451935889 /home/matias/C_CPP/Projektit/AK/src/lib/SQLiteCpp/include//SQLiteCpp/Statement.h
+	<sqlite3.h>
+	<string>
+	<map>
+	<SQLiteCpp/Exception.h>
+
+1451935889 /home/matias/C_CPP/Projektit/AK/src/lib/SQLiteCpp/include//SQLiteCpp/Transaction.h
+	<SQLiteCpp/Exception.h>
+
+1451935474 source:/home/matias/C_CPP/Projektit/AK/src/dbobject.cxx
+	"dbobject.hxx"
+
+1451936501 /home/matias/C_CPP/Projektit/AK/src/dbobject.hxx
+
+1451935889 source:/home/matias/C_CPP/Projektit/AK/src/lib/SQLiteCpp/src/Backup.cpp
+	<SQLiteCpp/Backup.h>
+	<SQLiteCpp/Exception.h>
+	<string>
+
+1451935889 /home/matias/C_CPP/Projektit/AK/src/lib/SQLiteCpp/include//SQLiteCpp/Backup.h
+	<sqlite3.h>
+	<SQLiteCpp/Database.h>
+	<string>
+
+1451935889 source:/home/matias/C_CPP/Projektit/AK/src/lib/SQLiteCpp/src/Column.cpp
+	<SQLiteCpp/Column.h>
+	<iostream>
+
+1451935889 source:/home/matias/C_CPP/Projektit/AK/src/lib/SQLiteCpp/src/Database.cpp
+	<SQLiteCpp/Database.h>
+	<SQLiteCpp/Statement.h>
+	<SQLiteCpp/Assertion.h>
+	<SQLiteCpp/Exception.h>
+	<string>
+
+1451935889 source:/home/matias/C_CPP/Projektit/AK/src/lib/SQLiteCpp/src/Statement.cpp
+	<SQLiteCpp/Statement.h>
+	<SQLiteCpp/Database.h>
+	<SQLiteCpp/Column.h>
+	<SQLiteCpp/Assertion.h>
+	<SQLiteCpp/Exception.h>
+	<string>
+
+1451935889 source:/home/matias/C_CPP/Projektit/AK/src/lib/SQLiteCpp/src/Transaction.cpp
+	<SQLiteCpp/Transaction.h>
+	<SQLiteCpp/Database.h>
+	<SQLiteCpp/Assertion.h>
+
+1451935889 /home/matias/C_CPP/Projektit/AK/src/lib/SQLiteCpp/include/SQLiteCpp/Backup.h
+	<sqlite3.h>
+	<SQLiteCpp/Database.h>
+	<string>
+
+1451935889 /home/matias/C_CPP/Projektit/AK/src/lib/SQLiteCpp/include/SQLiteCpp/Database.h
+	<sqlite3.h>
+	<SQLiteCpp/Column.h>
+	<string>
+
+1451935889 /home/matias/C_CPP/Projektit/AK/src/lib/SQLiteCpp/include/SQLiteCpp/Column.h
+	<sqlite3.h>
+	<SQLiteCpp/Statement.h>
+	<SQLiteCpp/Exception.h>
+	<string>
+
+1451935889 /home/matias/C_CPP/Projektit/AK/src/lib/SQLiteCpp/include/SQLiteCpp/Statement.h
+	<sqlite3.h>
+	<string>
+	<map>
+	<SQLiteCpp/Exception.h>
+
+1451935889 /home/matias/C_CPP/Projektit/AK/src/lib/SQLiteCpp/include/SQLiteCpp/Exception.h
+	<stdexcept>
+	<string>
+
+1451935889 /home/matias/C_CPP/Projektit/AK/src/lib/SQLiteCpp/include/SQLiteCpp/Assertion.h
+	<cassert>
+
+1451935889 /home/matias/C_CPP/Projektit/AK/src/lib/SQLiteCpp/include/SQLiteCpp/Transaction.h
+	<SQLiteCpp/Exception.h>
+

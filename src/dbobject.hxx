@@ -6,8 +6,8 @@ class DBObject
 {
     public:
         DBObject();
-    protected:
     private:
+
 };
 
 #endif // DBOBJECT_HXX
