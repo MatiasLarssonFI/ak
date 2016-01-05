@@ -2,7 +2,7 @@ swr#learning
 
 Software shall offer an interface through which new information is
 passed. Software shall evaluate the input and do appropiate changes
-(described later) to the database [1] according to passed information.
+to the database [1] according to passed information.
 
 The interface shall support these functions:
     - add an object
