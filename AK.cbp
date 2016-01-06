@@ -55,6 +55,7 @@
 		<Unit filename="src/ak.cxx" />
 		<Unit filename="src/dbobject.cxx" />
 		<Unit filename="src/dbobject.hxx" />
+		<Unit filename="src/idbobject.hxx" />
 		<Unit filename="src/lib/SQLiteCpp/src/Backup.cpp" />
 		<Unit filename="src/lib/SQLiteCpp/src/Column.cpp" />
 		<Unit filename="src/lib/SQLiteCpp/src/Database.cpp" />
