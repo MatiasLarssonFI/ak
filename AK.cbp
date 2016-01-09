@@ -33,6 +33,7 @@
 					<Add option="-std=c++11" />
 					<Add option="-Wextra" />
 					<Add option="-Wall" />
+					<Add directory="src" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -53,14 +54,20 @@
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="src/ak.cxx" />
-		<Unit filename="src/dbobject.cxx" />
-		<Unit filename="src/dbobject.hxx" />
+		<Unit filename="src/alias.hxx" />
+		<Unit filename="src/dbcursor.cxx" />
+		<Unit filename="src/dbcursor.hxx" />
+		<Unit filename="src/idbcursor.hxx" />
 		<Unit filename="src/idbobject.hxx" />
 		<Unit filename="src/lib/SQLiteCpp/src/Backup.cpp" />
 		<Unit filename="src/lib/SQLiteCpp/src/Column.cpp" />
 		<Unit filename="src/lib/SQLiteCpp/src/Database.cpp" />
 		<Unit filename="src/lib/SQLiteCpp/src/Statement.cpp" />
 		<Unit filename="src/lib/SQLiteCpp/src/Transaction.cpp" />
+		<Unit filename="src/realobject.cxx" />
+		<Unit filename="src/realobject.hxx" />
+		<Unit filename="src/sqlite3dbobject.cxx" />
+		<Unit filename="src/sqlite3dbobject.hxx" />
 		<Extensions>
 			<code_completion />
 			<debugger />
