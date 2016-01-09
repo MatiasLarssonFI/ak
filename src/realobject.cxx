@@ -3,11 +3,11 @@
 #include <utility>
 
 
-DBObject::DBObject(std::string name)
+RealObject::RealObject(std::string name)
     : m_name(std::move(name))
 {}
 
 
-const std::string& DBObject::name() const {
+const std::string& RealObject::name() const {
     return m_name;
 }
