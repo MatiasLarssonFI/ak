@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1451937112 source:/home/matias/C_CPP/Projektit/AK/src/ak.cxx
+1452371503 source:/home/matias/C_CPP/Projektit/AK/src/ak.cxx
 	<iostream>
 	<stdexcept>
 	<SQLiteCpp/SQLiteCpp.h>
@@ -109,4 +109,12 @@
 
 1451935889 /home/matias/C_CPP/Projektit/AK/src/lib/SQLiteCpp/include/SQLiteCpp/Transaction.h
 	<SQLiteCpp/Exception.h>
+
+1451935889 /home/matias/C_CPP/Projektit/AK/src/lib/SQLiteCpp/include/SQLiteCpp/SQLiteCpp.h
+	<SQLiteCpp/Assertion.h>
+	<SQLiteCpp/Exception.h>
+	<SQLiteCpp/Database.h>
+	<SQLiteCpp/Statement.h>
+	<SQLiteCpp/Column.h>
+	<SQLiteCpp/Transaction.h>
 

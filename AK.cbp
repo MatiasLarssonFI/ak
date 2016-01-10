@@ -55,8 +55,6 @@
 		</Unit>
 		<Unit filename="src/ak.cxx" />
 		<Unit filename="src/alias.hxx" />
-		<Unit filename="src/dbcursor.cxx" />
-		<Unit filename="src/dbcursor.hxx" />
 		<Unit filename="src/idbcursor.hxx" />
 		<Unit filename="src/idbobject.hxx" />
 		<Unit filename="src/lib/SQLiteCpp/src/Backup.cpp" />
@@ -64,8 +62,8 @@
 		<Unit filename="src/lib/SQLiteCpp/src/Database.cpp" />
 		<Unit filename="src/lib/SQLiteCpp/src/Statement.cpp" />
 		<Unit filename="src/lib/SQLiteCpp/src/Transaction.cpp" />
-		<Unit filename="src/realobject.cxx" />
 		<Unit filename="src/realobject.hxx" />
+		<Unit filename="src/sqlite3dbcursor.hxx" />
 		<Unit filename="src/sqlite3dbobject.cxx" />
 		<Unit filename="src/sqlite3dbobject.hxx" />
 		<Extensions>
