@@ -62,7 +62,6 @@
 		<Unit filename="src/lib/SQLiteCpp/src/Database.cpp" />
 		<Unit filename="src/lib/SQLiteCpp/src/Statement.cpp" />
 		<Unit filename="src/lib/SQLiteCpp/src/Transaction.cpp" />
-		<Unit filename="src/realobject.hxx" />
 		<Unit filename="src/sqlite3dbcursor.hxx" />
 		<Unit filename="src/sqlite3dbobject.cxx" />
 		<Unit filename="src/sqlite3dbobject.hxx" />
