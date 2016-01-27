@@ -11,7 +11,7 @@
 class IDBObject
 {
     public:
-        using DBCursor = IDBCursor<IDBObject>;
+        using DBCursor = uptr<IDBCursor<uptr<IDBObject>>>;
 
         //! Returns the object's name
         virtual const std::string& name() const = 0;

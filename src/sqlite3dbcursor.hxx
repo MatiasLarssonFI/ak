@@ -12,8 +12,7 @@
 
 //! SQLite3 database cursor.
 /*!
- * The DBCursor object is not CopyConstructible nor MoveCostructible.
- * Neither is it CopyAssignable nor MoveAssignable.
+ * The DBCursor object is not MoveCostructible nor MoveAssignable.
  *
  * \tparam T Must be MoveConstructible
  */
@@ -29,7 +28,7 @@ class SQLite3DBCursor : public IDBCursor<T>
          * \param stm The statement object
          * \param callback Callable used to construct a T object for each row
          */
-        SQLite3DBCursor(SQLite::Statement stm, FConstr callback)
+        SQLite3DBCursor(SQLite::Statement& stm, FConstr callback)
             : m_stm(stm)
             , m_cb(std::move(callback))
             , m_p_current(nullptr)
@@ -49,7 +48,7 @@ class SQLite3DBCursor : public IDBCursor<T>
         }
 
         bool hasNext() const {
-            return (bool)m_p_next;
+            return (bool)m_p_current;
         }
 
         SQLite3DBCursor(SQLite3DBCursor const &) = delete;
@@ -58,7 +57,7 @@ class SQLite3DBCursor : public IDBCursor<T>
         void _loadNext() {
             m_p_current.reset(nullptr);
             if (m_stm.executeStep()) {
-                std::vector cols;
+                std::vector<SQLite::Column> cols;
 
                 for(unsigned i = 0; i < m_stm.getColumnCount(); ++i) {
                     cols.push_back(m_stm.getColumn(i));

@@ -118,3 +118,22 @@
 	<SQLiteCpp/Column.h>
 	<SQLiteCpp/Transaction.h>
 
+1452453419 source:/home/matias/C_CPP/Projektit/AK/src/sqlite3dbobject.cxx
+	"sqlite3dbobject.hxx"
+	<utility>
+
+1452453580 /home/matias/C_CPP/Projektit/AK/src/sqlite3dbobject.hxx
+	<string>
+	"idbobject.hxx"
+	"idbcursor.hxx"
+
+1452453536 /home/matias/C_CPP/Projektit/AK/src/idbobject.hxx
+	<string>
+	"idbcursor.hxx"
+	"alias.hxx"
+
+1452452909 /home/matias/C_CPP/Projektit/AK/src/idbcursor.hxx
+
+1452453187 /home/matias/C_CPP/Projektit/AK/src/alias.hxx
+	<memory>
+
