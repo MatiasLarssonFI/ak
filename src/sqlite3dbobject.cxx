@@ -16,13 +16,23 @@ const std::string& SQLite3DBObject::name() const {
 void SQLite3DBObject::addProperty(std::string property_name) const {
     //TBD
 };
+
+
 void SQLite3DBObject::addGeneralization(std::string gen_name) const {
     //TBD
 };
 
+
 uptr<IDBObject::DBCursor> SQLite3DBObject::propertyCursor() const {
     //TBD
 };
+
+
 uptr<IDBObject::DBCursor> SQLite3DBObject::generalizationCursor() const {
+    //TBD
+};
+
+
+uptr<IDBObject::DBCursor> SQLite3DBObject::cursor(SQLite::Statement& stm) const {
     //TBD
 };

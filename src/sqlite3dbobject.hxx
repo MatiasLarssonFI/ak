@@ -2,6 +2,7 @@
 #define SQLITE3DBOBJECT_HXX
 
 #include <string>
+#include <SQLiteCpp/SQLiteCpp.h>
 
 #include "idbobject.hxx"
 #include "idbcursor.hxx"
@@ -22,6 +23,8 @@ class SQLite3DBObject : public IDBObject
         uptr<IDBObject::DBCursor> propertyCursor() const;
         uptr<IDBObject::DBCursor> generalizationCursor() const;
     private:
+        uptr<IDBObject::DBCursor> cursor(SQLite::Statement& stm) const;
+
         std::string m_name;
 };
 

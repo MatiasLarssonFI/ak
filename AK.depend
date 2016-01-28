@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1453961670 source:/home/matias/C_CPP/Projektit/AK/src/ak.cxx
+1454000846 source:/home/matias/C_CPP/Projektit/AK/src/ak.cxx
 	<iostream>
 	<stdexcept>
 	<string>
@@ -122,7 +122,7 @@
 	<SQLiteCpp/Column.h>
 	<SQLiteCpp/Transaction.h>
 
-1452453419 source:/home/matias/C_CPP/Projektit/AK/src/sqlite3dbobject.cxx
+1453961802 source:/home/matias/C_CPP/Projektit/AK/src/sqlite3dbobject.cxx
 	"sqlite3dbobject.hxx"
 	<utility>
 
@@ -139,8 +139,9 @@
 
 1452452909 /home/matias/C_CPP/Projektit/AK/src/idbcursor.hxx
 
-1452453187 /home/matias/C_CPP/Projektit/AK/src/alias.hxx
+1454000869 /home/matias/C_CPP/Projektit/AK/src/alias.hxx
 	<memory>
+	<iostream>
 
 1453961621 /home/matias/C_CPP/Projektit/AK/src/sqlite3dbcursor.hxx
 	<functional>
