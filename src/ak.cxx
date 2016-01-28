@@ -10,25 +10,23 @@
 
 int main(int argc, char *argv[]) {
 
-    if (argc < 2) {
-        throw new std::invalid_argument("");
-    }
-    // Open a database file
-    SQLite::Database    db(argv[1]);
+    if (argc == 2) {
+        try {
+            // Open a database file
+            SQLite::Database db(argv[1]);
 
-    // Compile a SQL query, containing one parameter (index 1)
-    SQLite::Statement   query(db, "SELECT * FROM object");
-    uptr<IDBCursor<std::string>> p_cursor(new SQLite3DBCursor<std::string>(query, [] (std::vector<SQLite::Column> cols) -> std::string {
-        const auto it = std::find_if(cols.begin(), cols.end(), [] (SQLite::Column const & col) {
-            return std::string(col.getName()) == "name";
-        });
-        if (it != cols.end()) {
-            return it->getText();
+            SQLite::Statement query(db, "SELECT name FROM object");
+            uptr<IDBCursor<std::string>> p_cursor(new SQLite3DBCursor<std::string>(query, [] (std::vector<SQLite::Column> cols) {
+                return cols[0].getText();
+            }));
+
+            while (p_cursor->hasNext()) {
+                std::cout << p_cursor->next() << std::endl;
+            }
+        } catch (std::exception const & e) {
+            errstream << "Error: " << e.what() << std::endl;
         }
-        return "";
-    }));
-
-    while (p_cursor->hasNext()) {
-        std::cout << p_cursor->next() << std::endl;
+    } else {
+        errstream << "Usage: " << argv[0] << " [database filename]" << std::endl;
     }
 }
