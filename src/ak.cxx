@@ -20,7 +20,7 @@ int main(int argc, char *argv[]) {
             return std::string(col.getName()) == "name";
         });
         if (it != cols.end()) {
-            return it->getName();
+            return it->getText();
         }
         return "";
     }));
