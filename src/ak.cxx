@@ -10,13 +10,16 @@
 
 int main(int argc, char *argv[]) {
 
+    if (argc < 2) {
+        throw new std::invalid_argument("");
+    }
     // Open a database file
     SQLite::Database    db(argv[1]);
 
     // Compile a SQL query, containing one parameter (index 1)
     SQLite::Statement   query(db, "SELECT * FROM object");
     uptr<IDBCursor<std::string>> p_cursor(new SQLite3DBCursor<std::string>(query, [] (std::vector<SQLite::Column> cols) -> std::string {
-        const auto it = std::find(cols.begin(), cols.end(), [] (SQLite::Column const & col) {
+        const auto it = std::find_if(cols.begin(), cols.end(), [] (SQLite::Column const & col) {
             return std::string(col.getName()) == "name";
         });
         if (it != cols.end()) {

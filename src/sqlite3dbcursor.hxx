@@ -63,7 +63,7 @@ class SQLite3DBCursor : public IDBCursor<T>
                     cols.push_back(m_stm.getColumn(i));
                 }
 
-                m_p_current.reset(m_cb(std::move(cols)));
+                m_p_current.reset(new T(m_cb(std::move(cols))));
             }
         }
 
