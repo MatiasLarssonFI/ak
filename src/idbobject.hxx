@@ -17,13 +17,13 @@ class IDBObject
         virtual const std::string& name() const = 0;
 
 
-        //! Adds a property relation.
+        //! Adds a composition relation.
         /*!
-         * If no object exists with property_name,
-         * one is created. The object named property_name
-         * is associated with this object as a property.
+         * If no object exists with component_name,
+         * one is created. The object named component_name
+         * is associated with this object as a component.
          */
-        virtual void addProperty(std::string property_name) const = 0;
+        virtual void addComponent(std::string component_name) const = 0;
 
 
         //! Adds a generalization relation.
@@ -35,8 +35,8 @@ class IDBObject
         virtual void addGeneralization(std::string gen_name) const = 0;
 
 
-        //! Returns a cursor to the properties.
-        virtual uptr<DBCursor> propertyCursor() const = 0;
+        //! Returns a cursor to the components.
+        virtual uptr<DBCursor> componentCursor() const = 0;
 
 
         //! Returns a cursor to the generalizations.
