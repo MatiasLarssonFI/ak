@@ -13,8 +13,8 @@ CREATE TABLE `object_generalization` (
 );
 
 
-CREATE TABLE `object_property` (
+CREATE TABLE `object_composition` (
     'id' INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
     'subject' INTEGER REFERENCES `object`(id) ON DELETE CASCADE,
-    'property' INTEGER REFERENCES `object`(id) ON DELETE CASCADE
+    'component' INTEGER REFERENCES `object`(id) ON DELETE CASCADE
 );
