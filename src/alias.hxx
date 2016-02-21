@@ -8,7 +8,7 @@
 template<class T>
 using uptr = std::unique_ptr<T>;
 
-auto& errstream = std::cerr;
+static auto& errstream = std::cerr;
 
 
 #endif // ALIAS_HXX
