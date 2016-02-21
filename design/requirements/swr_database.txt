@@ -16,7 +16,7 @@ There shall be an sqlite database. Database pseudoschema:
     - subject: object
     - property: object
 
-object.name shall be indexed.
+object.name shall be unique indexed.
 
 Software shall store information of real life objects in this
 database.
