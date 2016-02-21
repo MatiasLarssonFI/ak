@@ -6,7 +6,7 @@ to the database [1] according to passed information.
 
 The interface shall support these functions:
     - add an object
-    - associate an object with a property
+    - associate an object with a component
     - associate an object with a generalization
 
 
