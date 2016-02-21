@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1454000846 source:/home/matias/C_CPP/Projektit/AK/src/ak.cxx
+1454001180 source:/home/matias/C_CPP/Projektit/AK/src/ak.cxx
 	<iostream>
 	<stdexcept>
 	<string>
@@ -122,32 +122,43 @@
 	<SQLiteCpp/Column.h>
 	<SQLiteCpp/Transaction.h>
 
-1453961802 source:/home/matias/C_CPP/Projektit/AK/src/sqlite3dbobject.cxx
+1456066323 source:/home/matias/C_CPP/Projektit/AK/src/sqlite3dbobject.cxx
 	"sqlite3dbobject.hxx"
 	<utility>
+	"dbconfig.hxx"
+	"sqlite3dbcursor.hxx"
+	"alias.hxx"
 
-1453927305 /home/matias/C_CPP/Projektit/AK/src/sqlite3dbobject.hxx
+1454275529 /home/matias/C_CPP/Projektit/AK/src/sqlite3dbobject.hxx
 	<string>
+	<SQLiteCpp/SQLiteCpp.h>
+	"sqlite3dbcursor.hxx"
 	"idbobject.hxx"
 	"idbcursor.hxx"
 	"alias.hxx"
 
-1453926536 /home/matias/C_CPP/Projektit/AK/src/idbobject.hxx
+1456066736 /home/matias/C_CPP/Projektit/AK/src/idbobject.hxx
 	<string>
 	"idbcursor.hxx"
 	"alias.hxx"
 
 1452452909 /home/matias/C_CPP/Projektit/AK/src/idbcursor.hxx
 
-1454000869 /home/matias/C_CPP/Projektit/AK/src/alias.hxx
+1456068574 /home/matias/C_CPP/Projektit/AK/src/alias.hxx
 	<memory>
 	<iostream>
 
-1453961621 /home/matias/C_CPP/Projektit/AK/src/sqlite3dbcursor.hxx
+1454270699 /home/matias/C_CPP/Projektit/AK/src/sqlite3dbcursor.hxx
 	<functional>
 	<vector>
 	<stdexcept>
 	<SQLiteCpp/SQLiteCpp.h>
 	"idbcursor.hxx"
 	"alias.hxx"
+
+1456067340 source:/home/matias/C_CPP/Projektit/AK/src/dbconfig.cxx
+	"dbconfig.hxx"
+
+1456067330 /home/matias/C_CPP/Projektit/AK/src/dbconfig.hxx
+	<string>
 

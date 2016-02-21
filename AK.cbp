@@ -55,6 +55,8 @@
 		</Unit>
 		<Unit filename="src/ak.cxx" />
 		<Unit filename="src/alias.hxx" />
+		<Unit filename="src/dbconfig.cxx" />
+		<Unit filename="src/dbconfig.hxx" />
 		<Unit filename="src/idbcursor.hxx" />
 		<Unit filename="src/idbobject.hxx" />
 		<Unit filename="src/lib/SQLiteCpp/src/Backup.cpp" />
