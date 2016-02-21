@@ -20,7 +20,7 @@ template <class T>
 class SQLite3DBCursor : public IDBCursor<T>
 {
     public:
-        //! A Callable that takes a vector of columns and returns a new instance based on that.
+        //! A Callable that receives a vector of columns and returns an instance of T based on that.
         using FConstr = std::function<T(std::vector<SQLite::Column>)>;
 
         //! Constructor.
