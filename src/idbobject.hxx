@@ -17,6 +17,20 @@ class IDBObject
         virtual const std::string& name() const = 0;
 
 
+        //! Returns true if the object exists in the DB.
+        virtual bool exists() const = 0;
+
+
+        //! Adds the object to the DB.
+        /*!
+         * Inserts the object to the database. Will fail
+         * and throw if the object already exists.
+         *
+         * \throw std::logic_error If the object already exists
+         */
+        virtual void create() = 0;
+
+
         //! Adds a composition relation.
         /*!
          * If no object exists with component_name,
