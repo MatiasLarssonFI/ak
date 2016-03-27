@@ -17,6 +17,15 @@ class IDBObject
         virtual const std::string& name() const = 0;
 
 
+        //! Returns the object's ID.
+        /*!
+         * This method is rarely necessary as name() is
+         * always unique. This method is intended to be
+         * used only in database management.
+         */
+        virtual unsigned id() const = 0;
+
+
         //! Returns true if the object exists in the DB.
         virtual bool exists() const = 0;
 

@@ -20,6 +20,7 @@ class SQLite3DBObject : public IDBObject
         SQLite3DBObject(std::string name);
 
         const std::string& name() const;
+        unsigned id() const;
         bool exists() const;
 
         void create();
