@@ -12,9 +12,13 @@ CREATE TABLE `object_generalization` (
     'generalization' INTEGER REFERENCES `object`(id) ON DELETE CASCADE
 );
 
+CREATE UNIQUE INDEX gen_uniq ON `object_generalization`(subject, generalization);
+
 
 CREATE TABLE `object_composition` (
     'id' INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
     'subject' INTEGER REFERENCES `object`(id) ON DELETE CASCADE,
     'component' INTEGER REFERENCES `object`(id) ON DELETE CASCADE
 );
+
+CREATE UNIQUE INDEX com_uniq ON `object_generalization`(subject, component);
