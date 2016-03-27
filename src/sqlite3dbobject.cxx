@@ -26,6 +26,11 @@ const std::string& SQLite3DBObject::name() const {
 }
 
 
+unsigned SQLite3DBObject::id() const {
+    return m_id;
+}
+
+
 bool SQLite3DBObject::exists() const {
     return m_id > 0;
 }
@@ -33,7 +38,7 @@ bool SQLite3DBObject::exists() const {
 
 void SQLite3DBObject::create() {
     if (!exists()) {
-        t_statement query(m_db, "INSERT INTO object name VALUES(?)");
+        t_statement query(m_db, "INSERT INTO object (name) VALUES(?)");
         query.bind(1, m_name);
         query.exec();
     } else {
@@ -43,12 +48,28 @@ void SQLite3DBObject::create() {
 
 
 void SQLite3DBObject::addComponent(std::string component_name) const {
-    //TBD
+    SQLite3DBObject com(component_name);
+    if (!com.exists()) {
+        com.create();
+    }
+
+    t_statement query(m_db, "INSERT INTO object_composition (subject, component) VALUES(?, ?)");
+    query.bind(1, (int)m_id);
+    query.bind(2, (int)com.id());
+    query.exec();
 };
 
 
 void SQLite3DBObject::addGeneralization(std::string gen_name) const {
-    //TBD
+    SQLite3DBObject gen(gen_name);
+    if (!gen.exists()) {
+        gen.create();
+    }
+
+    t_statement query(m_db, "INSERT INTO object_generalization (subject, generalization) VALUES(?, ?)");
+    query.bind(1, (int)m_id);
+    query.bind(2, (int)gen.id());
+    query.exec();
 };
 
 
