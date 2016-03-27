@@ -21,4 +21,4 @@ CREATE TABLE `object_composition` (
     'component' INTEGER REFERENCES `object`(id) ON DELETE CASCADE
 );
 
-CREATE UNIQUE INDEX com_uniq ON `object_generalization`(subject, component);
+CREATE UNIQUE INDEX com_uniq ON `object_composition`(subject, component);
