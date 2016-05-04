@@ -12,6 +12,8 @@ class IDBCursor
          */
         virtual T next() = 0;
 
+
+        //! Returns true if next() will succeed.
         virtual bool hasNext() const = 0;
 };
 
