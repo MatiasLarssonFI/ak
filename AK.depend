@@ -142,9 +142,9 @@
 	"idbcursor.hxx"
 	"alias.hxx"
 
-1452452909 /home/matias/C_CPP/Projektit/AK/src/idbcursor.hxx
+1462379201 /home/matias/C_CPP/Projektit/AK/src/idbcursor.hxx
 
-1456068574 /home/matias/C_CPP/Projektit/AK/src/alias.hxx
+1462381322 /home/matias/C_CPP/Projektit/AK/src/alias.hxx
 	<memory>
 	<iostream>
 
@@ -161,4 +161,13 @@
 
 1456067330 /home/matias/C_CPP/Projektit/AK/src/dbconfig.hxx
 	<string>
+
+1462380989 /home/matias/C_CPP/Projektit/AK/src/sqlite3dbfactory.hxx
+	"alias.hxx"
+	"idbfactory.hxx"
+	"sqlite3dbobject.hxx"
+
+1462380950 /home/matias/C_CPP/Projektit/AK/src/idbfactory.hxx
+	"alias.hxx"
+	"idbobject.hxx"
 
