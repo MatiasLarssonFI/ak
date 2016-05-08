@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="AK-unittest" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="debug">
+				<Option output="bin/debug/ak-unittest" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option parameters="../../data/data.db" />
+				<Compiler>
+					<Add option="-pedantic" />
+					<Add option="-std=c++11" />
+					<Add option="-Wextra" />
+					<Add option="-Wall" />
+					<Add option="-g" />
+					<Add directory="../../src/lib/SQLiteCpp/include" />
+					<Add directory="../../src" />
+				</Compiler>
+				<Linker>
+					<Add option="-lsqlite3" />
+					<Add library="/usr/local/lib/libUnitTest++.a" />
+				</Linker>
+			</Target>
+			<Target title="release">
+				<Option output="bin/release/ak-unittest" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option parameters="../../data/data.db" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-pedantic" />
+					<Add option="-std=c++11" />
+					<Add option="-Wextra" />
+					<Add option="-Wall" />
+					<Add directory="../../src" />
+					<Add directory="../../src/lib/SQLiteCpp/include" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-lsqlite3" />
+					<Add library="/usr/local/lib/libUnitTest++.a" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add directory="SQLiteCpp/include/SQLiteCpp" />
+		</Compiler>
+		<Unit filename="../../src/alias.hxx" />
+		<Unit filename="../../src/dbconfig.cxx" />
+		<Unit filename="../../src/dbconfig.hxx" />
+		<Unit filename="../../src/dbfactoryutil.cxx" />
+		<Unit filename="../../src/dbfactoryutil.hxx" />
+		<Unit filename="../../src/idbcursor.hxx" />
+		<Unit filename="../../src/idbfactory.hxx" />
+		<Unit filename="../../src/idbobject.hxx" />
+		<Unit filename="../../src/lib/SQLiteCpp/src/Backup.cpp" />
+		<Unit filename="../../src/lib/SQLiteCpp/src/Column.cpp" />
+		<Unit filename="../../src/lib/SQLiteCpp/src/Database.cpp" />
+		<Unit filename="../../src/lib/SQLiteCpp/src/Statement.cpp" />
+		<Unit filename="../../src/lib/SQLiteCpp/src/Transaction.cpp" />
+		<Unit filename="../../src/sqlite3dbcursor.hxx" />
+		<Unit filename="../../src/sqlite3dbfactory.cxx" />
+		<Unit filename="../../src/sqlite3dbfactory.hxx" />
+		<Unit filename="../../src/sqlite3dbobject.cxx" />
+		<Unit filename="../../src/sqlite3dbobject.hxx" />
+		<Unit filename="objecttestfixture.cxx" />
+		<Unit filename="objecttestfixture.hxx" />
+		<Unit filename="unittests.cxx" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
