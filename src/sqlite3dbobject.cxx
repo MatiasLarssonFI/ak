@@ -100,6 +100,6 @@ uptr<IDBObject::DBCursor> SQLite3DBObject::_cursor(SQLite3DBObject::t_statement&
 
 
 SQLite::Database& SQLite3DBObject::_getDBInstance() const {
-    static t_db db(DBConfig::getInstance().filename());
+    static t_db db(DBConfig::getInstance().filename(), SQLITE_OPEN_READWRITE);
     return db;
 }
