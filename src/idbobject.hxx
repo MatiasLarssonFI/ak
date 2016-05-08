@@ -35,6 +35,9 @@ class IDBObject
          * Inserts the object to the database. Will fail
          * and throw if the object already exists.
          *
+         * After this method returns, id() will return the
+         * DB ID.
+         *
          * \throw std::logic_error If the object already exists
          */
         virtual void create() = 0;

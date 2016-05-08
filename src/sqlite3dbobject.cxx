@@ -41,6 +41,7 @@ void SQLite3DBObject::create() {
         t_statement query(m_db, "INSERT INTO object (name) VALUES(?)");
         query.bind(1, m_name);
         query.exec();
+        m_id = m_db.getLastInsertRowid();
     } else {
         throw std::logic_error(std::string("'") + m_name + "' already exists");
     }
