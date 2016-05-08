@@ -8,9 +8,19 @@
 TEST_FIXTURE(ObjectTestFixture, OBJECT_INSTANCE)
 {
     uptr<IDBObject> obj = m_db_factory->getDBObject("test object");
-    CHECK_EQUAL(false, obj->exists());
+    CHECK(!obj->exists());
     CHECK_EQUAL("test object", obj->name());
     CHECK_EQUAL(0, obj->id());
+}
+
+
+TEST_FIXTURE(ObjectTestFixture, OBJECT_SAVE_SUCCESS)
+{
+    uptr<IDBObject> obj = m_db_factory->getDBObject("test object");
+    REQUIRE CHECK(!obj->exists());
+    obj->create();
+    CHECK(obj->exists());
+    CHECK(obj->id() > 0);
 }
 
 
