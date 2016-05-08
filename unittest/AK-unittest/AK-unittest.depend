@@ -1,8 +1,9 @@
 # depslib dependency file v1.0
-1462472863 source:/home/matias/C_CPP/Projektit/AK/unittest/AK-unittest/unittests.cxx
+1462736235 source:/home/matias/C_CPP/Projektit/AK/unittest/AK-unittest/unittests.cxx
 	"UnitTest++/UnitTest++.h"
 	"objecttestfixture.hxx"
 	"alias.hxx"
+	"dbconfig.hxx"
 
 1462732844 source:/home/matias/C_CPP/Projektit/AK/unittest/AK-unittest/objecttestfixture.cxx
 	"objecttestfixture.hxx"
@@ -20,7 +21,7 @@
 	"alias.hxx"
 	"idbobject.hxx"
 
-1459091586 /home/matias/C_CPP/Projektit/AK/src/idbobject.hxx
+1462736136 /home/matias/C_CPP/Projektit/AK/src/idbobject.hxx
 	<string>
 	"idbcursor.hxx"
 	"alias.hxx"
