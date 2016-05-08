@@ -162,12 +162,30 @@
 1456067330 /home/matias/C_CPP/Projektit/AK/src/dbconfig.hxx
 	<string>
 
-1462380989 /home/matias/C_CPP/Projektit/AK/src/sqlite3dbfactory.hxx
+1462473224 /home/matias/C_CPP/Projektit/AK/src/sqlite3dbfactory.hxx
+	<string>
 	"alias.hxx"
 	"idbfactory.hxx"
-	"sqlite3dbobject.hxx"
+	"idbobject.hxx"
 
-1462380950 /home/matias/C_CPP/Projektit/AK/src/idbfactory.hxx
+1462381470 /home/matias/C_CPP/Projektit/AK/src/idbfactory.hxx
 	"alias.hxx"
 	"idbobject.hxx"
+
+1462731890 source:/home/matias/C_CPP/Projektit/AK/src/sqlite3dbfactory.cxx
+	<string>
+	"sqlite3dbfactory.hxx"
+	"idbobject.hxx"
+	"sqlite3dbobject.hxx"
+	"alias.hxx"
+
+1462732447 source:/home/matias/C_CPP/Projektit/AK/src/dbfactoryutil.cxx
+	"dbfactoryutil.hxx"
+	"idbfactory.hxx"
+	"sqlite3dbfactory.hxx"
+	"alias.hxx"
+
+1462732474 /home/matias/C_CPP/Projektit/AK/src/dbfactoryutil.hxx
+	"idbfactory.hxx"
+	"alias.hxx"
 

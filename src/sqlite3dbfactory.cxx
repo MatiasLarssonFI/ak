@@ -1,4 +1,8 @@
+#include <string>
+
 #include "sqlite3dbfactory.hxx"
+#include "idbobject.hxx"
+#include "sqlite3dbobject.hxx"
 #include "alias.hxx"
 
 

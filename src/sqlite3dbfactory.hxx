@@ -1,9 +1,11 @@
 #ifndef SQLITEDBFACTORY_HXX
 #define SQLITEDBFACTORY_HXX
 
+#include <string>
+
 #include "alias.hxx"
 #include "idbfactory.hxx"
-#include "sqlite3dbobject.hxx"
+#include "idbobject.hxx"
 
 
 class SQLite3DBFactory : public IDBFactory {
