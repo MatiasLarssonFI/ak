@@ -60,7 +60,10 @@
 		<Unit filename="src/alias.hxx" />
 		<Unit filename="src/dbconfig.cxx" />
 		<Unit filename="src/dbconfig.hxx" />
+		<Unit filename="src/dbfactoryutil.cxx" />
+		<Unit filename="src/dbfactoryutil.hxx" />
 		<Unit filename="src/idbcursor.hxx" />
+		<Unit filename="src/idbfactory.hxx" />
 		<Unit filename="src/idbobject.hxx" />
 		<Unit filename="src/lib/SQLiteCpp/src/Backup.cpp" />
 		<Unit filename="src/lib/SQLiteCpp/src/Column.cpp" />
@@ -68,6 +71,8 @@
 		<Unit filename="src/lib/SQLiteCpp/src/Statement.cpp" />
 		<Unit filename="src/lib/SQLiteCpp/src/Transaction.cpp" />
 		<Unit filename="src/sqlite3dbcursor.hxx" />
+		<Unit filename="src/sqlite3dbfactory.cxx" />
+		<Unit filename="src/sqlite3dbfactory.hxx" />
 		<Unit filename="src/sqlite3dbobject.cxx" />
 		<Unit filename="src/sqlite3dbobject.hxx" />
 		<Extensions>
