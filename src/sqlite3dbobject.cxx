@@ -58,7 +58,7 @@ void SQLite3DBObject::addComponent(std::string component_name) const {
     query.bind(1, (int)m_id);
     query.bind(2, (int)com.id());
     query.exec();
-};
+}
 
 
 void SQLite3DBObject::addGeneralization(std::string gen_name) const {
@@ -71,7 +71,7 @@ void SQLite3DBObject::addGeneralization(std::string gen_name) const {
     query.bind(1, (int)m_id);
     query.bind(2, (int)gen.id());
     query.exec();
-};
+}
 
 
 uptr<IDBObject::DBCursor> SQLite3DBObject::componentCursor() const {
@@ -80,7 +80,7 @@ uptr<IDBObject::DBCursor> SQLite3DBObject::componentCursor() const {
                             " inner join object o_com on o_com.id = c.component"); // 1 to 1
     query.bind(1, (int)m_id);
     return _cursor(query);
-};
+}
 
 
 uptr<IDBObject::DBCursor> SQLite3DBObject::generalizationCursor() const {
@@ -89,14 +89,14 @@ uptr<IDBObject::DBCursor> SQLite3DBObject::generalizationCursor() const {
                             " inner join object o_gen on o_gen.id = g.generalization"); // 1 to 1
     query.bind(1, (int)m_id);
     return _cursor(query);
-};
+}
 
 
 uptr<IDBObject::DBCursor> SQLite3DBObject::_cursor(SQLite3DBObject::t_statement& stm) const {
     return uptr<IDBObject::DBCursor> (new SQLite3DBCursor<uptr<IDBObject>>(stm, [] (std::vector<SQLite::Column> cols) {
         return uptr<IDBObject>(new SQLite3DBObject(cols[0].getText()));
     }));
-};
+}
 
 
 SQLite::Database& SQLite3DBObject::_getDBInstance() const {
