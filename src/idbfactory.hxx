@@ -7,7 +7,7 @@
 class IDBFactory
 {
     public:
-        virtual uptr<IDBObject> getDBObject(std::string name) = 0;
+        virtual uptr<IDBObject> getDBObject(std::string name) const = 0;
 };
 
 #endif // IDBFACTORY_HXX

@@ -2,18 +2,19 @@
 #include <iostream>
 
 #include "objecttestfixture.hxx"
-#include "dbfactoryutil.hxx"
-#include "dbconfig.hxx"
 
 
 ObjectTestFixture::ObjectTestFixture()
-    : m_db_factory(ak_util::getDBFactory())
+    : m_db_factory(m_db_inst_man.getDBFactory())
 {
 
 }
 
 ObjectTestFixture::~ObjectTestFixture()
 {
-    SQLite::Database db(DBConfig::getInstance().filename(), SQLITE_OPEN_READWRITE);
+
+    DBInstanceManager::t_db& db = m_db_inst_man.getDB();
     db.exec("delete from object;");
+    db.exec("delete from object_generalization;");
+    db.exec("delete from object_composition;");
 }

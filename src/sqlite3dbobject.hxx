@@ -4,9 +4,7 @@
 #include <string>
 #include <SQLiteCpp/SQLiteCpp.h>
 
-#include "sqlite3dbcursor.hxx"
 #include "idbobject.hxx"
-#include "idbcursor.hxx"
 #include "alias.hxx"
 
 
@@ -17,7 +15,7 @@ class SQLite3DBObject : public IDBObject
         using t_db = SQLite::Database;
         using t_statement = SQLite::Statement;
 
-        SQLite3DBObject(std::string name);
+        SQLite3DBObject(std::string name, t_db& db);
 
         const std::string& name() const;
         unsigned id() const;
@@ -30,19 +28,15 @@ class SQLite3DBObject : public IDBObject
         uptr<IDBObject::DBCursor> componentCursor() const;
         uptr<IDBObject::DBCursor> generalizationCursor() const;
 
-    protected:
-        //! Factory method to get the SQLite::Database instance.
-        t_db& _getDBInstance() const;
-
     private:
         //! Returns an SQLite3DBObject DBcursor
         /*!
-         * \param stm The query result may contain only one column; the name
+         * \param pStm The query result may contain only one column; the name
          */
-        uptr<IDBObject::DBCursor> _cursor(t_statement& stm) const;
+        uptr<IDBObject::DBCursor> _cursor(uptr<t_statement> p_stm) const;
 
         std::string m_name;
-        SQLite::Database& m_db;
+        t_db& m_db;
         unsigned m_id;
 };
 

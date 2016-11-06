@@ -14,6 +14,9 @@
 				<Option compiler="gcc" />
 				<Option parameters="../../data/data.db" />
 				<Compiler>
+					<Add option="-Wfloat-equal" />
+					<Add option="-Wunreachable-code" />
+					<Add option="-Wswitch-enum" />
 					<Add option="-pedantic" />
 					<Add option="-std=c++11" />
 					<Add option="-Wextra" />
@@ -56,8 +59,8 @@
 		<Unit filename="../../src/alias.hxx" />
 		<Unit filename="../../src/dbconfig.cxx" />
 		<Unit filename="../../src/dbconfig.hxx" />
-		<Unit filename="../../src/dbfactoryutil.cxx" />
-		<Unit filename="../../src/dbfactoryutil.hxx" />
+		<Unit filename="../../src/dbinstancemanager.cxx" />
+		<Unit filename="../../src/dbinstancemanager.hxx" />
 		<Unit filename="../../src/idbcursor.hxx" />
 		<Unit filename="../../src/idbfactory.hxx" />
 		<Unit filename="../../src/idbobject.hxx" />

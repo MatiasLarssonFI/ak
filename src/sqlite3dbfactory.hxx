@@ -7,9 +7,16 @@
 #include "idbfactory.hxx"
 #include "idbobject.hxx"
 
+#include <SQLiteCpp/SQLiteCpp.h>
+
 
 class SQLite3DBFactory : public IDBFactory {
-    uptr<IDBObject> getDBObject(std::string name);
+    public:
+        SQLite3DBFactory(SQLite::Database& db);
+        uptr<IDBObject> getDBObject(std::string name) const;
+
+    private:
+        SQLite::Database& m_db;
 };
 
 #endif // SQLITEDBFACTORY_HXX

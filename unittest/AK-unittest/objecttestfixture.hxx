@@ -2,7 +2,7 @@
 #define OBJECTTESTFIXTURE_HXX
 
 #include "alias.hxx"
-#include "idbfactory.hxx"
+#include "dbinstancemanager.hxx"
 
 
 class ObjectTestFixture
@@ -11,7 +11,8 @@ class ObjectTestFixture
         ObjectTestFixture();
         ~ObjectTestFixture();
     protected:
-        sptr<IDBFactory> m_db_factory;
+        DBInstanceManager m_db_inst_man;
+        uptr<IDBFactory> const & m_db_factory;
 };
 
 #endif // OBJECTTESTFIXTURE_HXX

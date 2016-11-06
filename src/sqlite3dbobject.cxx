@@ -1,15 +1,15 @@
 #include "sqlite3dbobject.hxx"
 
 #include <utility>
+#include <stdexcept>
 
-#include "dbconfig.hxx"
 #include "sqlite3dbcursor.hxx"
 #include "alias.hxx"
 
 
-SQLite3DBObject::SQLite3DBObject(std::string name)
+SQLite3DBObject::SQLite3DBObject(std::string name, t_db& db)
     : m_name(std::move(name))
-    , m_db(_getDBInstance())
+    , m_db(db)
     , m_id(0)
 {
     // try to get object id
@@ -49,7 +49,7 @@ void SQLite3DBObject::create() {
 
 
 void SQLite3DBObject::addComponent(std::string component_name) const {
-    SQLite3DBObject com(component_name);
+    SQLite3DBObject com(component_name, m_db);
     if (!com.exists()) {
         com.create();
     }
@@ -62,7 +62,7 @@ void SQLite3DBObject::addComponent(std::string component_name) const {
 
 
 void SQLite3DBObject::addGeneralization(std::string gen_name) const {
-    SQLite3DBObject gen(gen_name);
+    SQLite3DBObject gen(gen_name, m_db);
     if (!gen.exists()) {
         gen.create();
     }
@@ -75,31 +75,30 @@ void SQLite3DBObject::addGeneralization(std::string gen_name) const {
 
 
 uptr<IDBObject::DBCursor> SQLite3DBObject::componentCursor() const {
-    t_statement query(m_db, "SELECT o_com.name FROM object"
+    uptr<t_statement> p_query(
+                        new t_statement(m_db, "SELECT o_com.name FROM object"
                             " inner join object_composition c on c.subject = ?" // N to 1
-                            " inner join object o_com on o_com.id = c.component"); // 1 to 1
-    query.bind(1, (int)m_id);
-    return _cursor(query);
+                            " inner join object o_com on o_com.id = c.component") // 1 to 1
+                    );
+    p_query->bind(1, (int)m_id);
+    return _cursor(std::move(p_query));
 }
 
 
 uptr<IDBObject::DBCursor> SQLite3DBObject::generalizationCursor() const {
-   t_statement query(m_db, "SELECT o_gen.name FROM object"
+    uptr<t_statement> p_query(
+                        new t_statement(m_db, "SELECT o_gen.name FROM object"
                             " inner join object_generalization g on g.subject = ?" // N to 1
-                            " inner join object o_gen on o_gen.id = g.generalization"); // 1 to 1
-    query.bind(1, (int)m_id);
-    return _cursor(query);
+                            " inner join object o_gen on o_gen.id = g.generalization") // 1 to 1
+                    );
+    p_query->bind(1, (int)m_id);
+    return _cursor(std::move(p_query));
 }
 
 
-uptr<IDBObject::DBCursor> SQLite3DBObject::_cursor(SQLite3DBObject::t_statement& stm) const {
-    return uptr<IDBObject::DBCursor> (new SQLite3DBCursor<uptr<IDBObject>>(stm, [] (std::vector<SQLite::Column> cols) {
-        return uptr<IDBObject>(new SQLite3DBObject(cols[0].getText()));
+uptr<IDBObject::DBCursor> SQLite3DBObject::_cursor(uptr<SQLite3DBObject::t_statement> p_stm) const {
+    t_db& db = m_db;
+    return uptr<IDBObject::DBCursor> (new SQLite3DBCursor<uptr<IDBObject>>(std::move(p_stm), [&db] (std::vector<SQLite::Column> cols) {
+        return uptr<IDBObject>(new SQLite3DBObject(cols[0].getText(), db));
     }));
-}
-
-
-SQLite::Database& SQLite3DBObject::_getDBInstance() const {
-    static t_db db(DBConfig::getInstance().filename(), SQLITE_OPEN_READWRITE);
-    return db;
 }

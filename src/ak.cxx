@@ -5,6 +5,8 @@
 #include <algorithm>
 
 #include "alias.hxx"
+#include "dbconfig.hxx"
+#include "dbinstancemanager.hxx"
 #include "sqlite3dbcursor.hxx"
 
 
@@ -12,11 +14,12 @@ int main(int argc, char *argv[]) {
 
     if (argc == 2) {
         try {
-            // Open a database file
-            SQLite::Database db(argv[1]);
+            DBConfig::db_filename = argv[1];
+            DBInstanceManager db_inst_man;
+            SQLite::Database& db = db_inst_man.getDB();
 
-            SQLite::Statement query(db, "SELECT name FROM object");
-            uptr<IDBCursor<std::string>> p_cursor(new SQLite3DBCursor<std::string>(query, [] (std::vector<SQLite::Column> cols) {
+            uptr<SQLite::Statement> p_query(new SQLite::Statement(db, "SELECT name FROM object"));
+            uptr<IDBCursor<std::string>> p_cursor(new SQLite3DBCursor<std::string>(std::move(p_query), [] (std::vector<SQLite::Column> cols) {
                 return cols[0].getText();
             }));
 
