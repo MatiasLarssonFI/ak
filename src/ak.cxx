@@ -2,7 +2,6 @@
 #include <stdexcept>
 #include <string>
 #include <vector>
-#include <algorithm>
 
 #include "alias.hxx"
 #include "dbconfig.hxx"
