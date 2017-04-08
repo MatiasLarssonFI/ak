@@ -5,6 +5,7 @@
 #include <stdexcept>
 
 #include <SQLiteCpp/SQLiteCpp.h>
+#include <sqlite3.h>
 
 DBInstanceManager::DBInstanceManager()
     : m_db(DBConfig::getInstance().filename(), SQLITE_OPEN_READWRITE)
