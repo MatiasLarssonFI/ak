@@ -30,7 +30,7 @@ TEST_FIXTURE(ObjectTestFixture, OBJECT_SAVE_SUCCESS)
 
 TEST_FIXTURE(ObjectTestFixture, OBJECT_GEN_ADD)
 {
-    const std::string str_ms = "Motor ship";
+    constexpr auto str_ms = "Motor ship";
     uptr<IDBObject> grace = m_db_factory->getDBObject("Viking Grace");
     grace->create();
     REQUIRE CHECK(grace->exists()); // just make sure that object is created, not really part of test
