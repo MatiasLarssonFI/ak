@@ -76,9 +76,9 @@ void SQLite3DBObject::addGeneralization(std::string gen_name) const {
 
 uptr<IDBObject::DBCursor> SQLite3DBObject::componentCursor() const {
     uptr<t_statement> p_query(
-                        new t_statement(m_db, "SELECT o_com.name FROM object"
-                            " inner join object_composition c on c.subject = ?" // N to 1
-                            " inner join object o_com on o_com.id = c.component") // 1 to 1
+                        new t_statement(m_db, "SELECT object.name FROM object_composition oc"
+                            " inner join object on object.id = oc.component" // 1 to 1
+                            " where oc.subject = ?")
                     );
     p_query->bind(1, (int)m_id);
     return _cursor(std::move(p_query));
@@ -87,9 +87,9 @@ uptr<IDBObject::DBCursor> SQLite3DBObject::componentCursor() const {
 
 uptr<IDBObject::DBCursor> SQLite3DBObject::generalizationCursor() const {
     uptr<t_statement> p_query(
-                        new t_statement(m_db, "SELECT o_gen.name FROM object"
-                            " inner join object_generalization g on g.subject = ?" // N to 1
-                            " inner join object o_gen on o_gen.id = g.generalization") // 1 to 1
+                        new t_statement(m_db, "SELECT object.name FROM object_generalization og"
+                            " inner join object on object.id = og.generalization" // 1 to 1
+                            " where og.subject = ?")
                     );
     p_query->bind(1, (int)m_id);
     return _cursor(std::move(p_query));
