@@ -383,7 +383,7 @@
 	"alias.hxx"
 	"dbinstancemanager.hxx"
 
-1491412908 source:/home/matias/project/ak/unittest/AK-unittest/unittests.cxx
+1492428825 source:/home/matias/project/ak/unittest/AK-unittest/unittests.cxx
 	"UnitTest++/UnitTest++.h"
 	<string>
 	<stdexcept>
@@ -391,4 +391,8 @@
 	"alias.hxx"
 	"dbconfig.hxx"
 	"idbobject.hxx"
+
+1469511575 source:/home/matias/project/ak/src/lib/SQLiteCpp/src/Exception.cpp
+	<SQLiteCpp/Exception.h>
+	<sqlite3.h>
 
