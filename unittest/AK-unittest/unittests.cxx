@@ -2,6 +2,7 @@
 
 #include <string>
 #include <stdexcept>
+#include <algorithm> // find
 
 #include "objecttestfixture.hxx"
 #include "alias.hxx"
@@ -9,6 +10,7 @@
 #include "idbobject.hxx"
 
 
+// initialization
 TEST_FIXTURE(ObjectTestFixture, OBJECT_INSTANCE)
 {
     uptr<IDBObject> obj = m_db_factory->getDBObject("test object");
@@ -18,6 +20,7 @@ TEST_FIXTURE(ObjectTestFixture, OBJECT_INSTANCE)
 }
 
 
+// save
 TEST_FIXTURE(ObjectTestFixture, OBJECT_SAVE_SUCCESS)
 {
     uptr<IDBObject> obj = m_db_factory->getDBObject("test object");
@@ -28,12 +31,13 @@ TEST_FIXTURE(ObjectTestFixture, OBJECT_SAVE_SUCCESS)
 }
 
 
-TEST_FIXTURE(ObjectTestFixture, OBJECT_GEN_ADD)
+// one generalization
+TEST_FIXTURE(ObjectTestFixture, OBJECT_GEN_ADD_ONE)
 {
     constexpr auto str_ms = "Motor ship";
     uptr<IDBObject> grace = m_db_factory->getDBObject("Viking Grace");
     grace->create();
-    REQUIRE CHECK(grace->exists()); // just make sure that object is created, not really part of test
+    REQUIRE CHECK(grace->exists()); // just make sure that object was created, pre-requisite of test
 
     grace->addGeneralization(str_ms);
 
@@ -49,6 +53,56 @@ TEST_FIXTURE(ObjectTestFixture, OBJECT_GEN_ADD)
     }
 
     CHECK_EQUAL(1, gen_count);
+}
+
+
+// one component
+TEST_FIXTURE(ObjectTestFixture, OBJECT_COM_ADD_ONE)
+{
+    constexpr auto str_engine = "Ship engine";
+    uptr<IDBObject> ship = m_db_factory->getDBObject("Motor Ship");
+    REQUIRE CHECK(!ship->exists()); // just make sure that object does NOT exist, pre-requisite of test
+
+    ship->create();
+    ship->addComponent(str_engine);
+
+    uptr<IDBObject> engine = m_db_factory->getDBObject(str_engine);
+    REQUIRE CHECK(engine->exists());
+
+    uptr<IDBObject::DBCursor> com_cursor = ship->componentCursor();
+    int com_count = 0;
+
+    while (com_cursor->hasNext()) {
+        com_count++;
+        CHECK_EQUAL(str_engine, com_cursor->next()->name());
+    }
+
+    CHECK_EQUAL(1, com_count);
+}
+
+
+// many components
+TEST_FIXTURE(ObjectTestFixture, OBJECT_COM_ADD_MANY)
+{
+    const std::vector<std::string> components { "Ship engine", "Rudder", "Deck", "Lifeboat" };
+    uptr<IDBObject> ship = m_db_factory->getDBObject("Motor Ship");
+
+    ship->create();
+    for (auto const & str_com : components) {
+        ship->addComponent(str_com);
+        uptr<IDBObject> com = m_db_factory->getDBObject(str_com);
+        REQUIRE CHECK(com->exists());
+    }
+
+    uptr<IDBObject::DBCursor> com_cursor = ship->componentCursor();
+    int com_count = 0;
+
+    while (com_cursor->hasNext()) {
+        com_count++;
+        CHECK(std::find(components.begin(), components.end(), com_cursor->next()->name()) != components.end());
+    }
+
+    CHECK_EQUAL(components.size(), com_count);
 }
 
 
