@@ -43,7 +43,7 @@ void SQLite3DBObject::create() {
         query.exec();
         m_id = m_db.getLastInsertRowid();
     } else {
-        throw std::logic_error(std::string("'") + m_name + "' already exists");
+        throw std::logic_error(std::string("\"") + m_name + "\" already exists");
     }
 }
 
