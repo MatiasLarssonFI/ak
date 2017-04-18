@@ -52,7 +52,6 @@ class SQLite3DBCursor : public IDBCursor<T>
             return (bool)m_p_current;
         }
 
-
         SQLite3DBCursor(SQLite3DBCursor const &) = delete;
         SQLite3DBCursor& operator=(SQLite3DBCursor const &) = delete;
     private:
@@ -66,14 +65,6 @@ class SQLite3DBCursor : public IDBCursor<T>
                 }
 
                 m_p_current.reset(new T(m_cb(std::move(cols))));
-            } else if (m_p_stm) {
-                //TBD: find reason to why this has to be done.
-                // The unique pointer should destroy the statement
-                // anyways upon its own destruction. But for some reason,
-                // if we don't do this, the statement stays alive and keeps
-                // the database locked, which causes an assertion failure
-                // at Database::~Database() on program termination.
-                m_p_stm.reset(nullptr);
             }
         }
 

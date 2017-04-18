@@ -15,6 +15,9 @@ class IDBCursor
 
         //! Returns true if next() will succeed.
         virtual bool hasNext() const = 0;
+
+
+        virtual ~IDBCursor() {}
 };
 
 #endif // IDBCURSOR_HXX

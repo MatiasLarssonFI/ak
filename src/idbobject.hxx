@@ -67,6 +67,9 @@ class IDBObject
 
         //! Returns a cursor to the generalizations.
         virtual uptr<DBCursor> generalizationCursor() const = 0;
+
+
+        virtual ~IDBObject() {}
 };
 
 #endif // IDBOBJECT_HXX
