@@ -106,6 +106,22 @@ TEST_FIXTURE(ObjectTestFixture, OBJECT_COM_ADD_MANY)
 }
 
 
+// save duplicate (error handling)
+TEST_FIXTURE(ObjectTestFixture, OBJECT_SAVE_DUPLICATE_ERROR)
+{
+    uptr<IDBObject> obj = m_db_factory->getDBObject("test object");
+    REQUIRE CHECK(!obj->exists());
+    obj->create();
+    bool had_exception = false;
+    try {
+        obj->create();
+    } catch (std::logic_error const & e) {
+        had_exception = true;
+    }
+    CHECK(had_exception);
+}
+
+
 int main(int argc, const char * argv[]) {
     if (argc == 2) {
         try {
