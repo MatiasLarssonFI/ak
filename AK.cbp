@@ -23,6 +23,7 @@
 					<Add option="-Wall" />
 					<Add option="-g" />
 					<Add directory="src/lib/SQLiteCpp/include" />
+					<Add directory="src" />
 				</Compiler>
 				<Linker>
 					<Add option="-lsqlite3" />
@@ -65,9 +66,12 @@
 		<Unit filename="src/dbconfig.hxx" />
 		<Unit filename="src/dbinstancemanager.cxx" />
 		<Unit filename="src/dbinstancemanager.hxx" />
+		<Unit filename="src/generalizationrelationexpression.cxx" />
+		<Unit filename="src/generalizationrelationexpression.hxx" />
 		<Unit filename="src/idbcursor.hxx" />
 		<Unit filename="src/idbfactory.hxx" />
 		<Unit filename="src/idbobject.hxx" />
+		<Unit filename="src/irelationwriteoperation.hxx" />
 		<Unit filename="src/lib/SQLiteCpp/include/SQLiteCpp/Assertion.h" />
 		<Unit filename="src/lib/SQLiteCpp/include/SQLiteCpp/Backup.h" />
 		<Unit filename="src/lib/SQLiteCpp/include/SQLiteCpp/Column.h" />
@@ -88,6 +92,8 @@
 		<Unit filename="src/sqlite3dbfactory.hxx" />
 		<Unit filename="src/sqlite3dbobject.cxx" />
 		<Unit filename="src/sqlite3dbobject.hxx" />
+		<Unit filename="src/streaminterface.cxx" />
+		<Unit filename="src/streaminterface.hxx" />
 		<Extensions>
 			<code_completion />
 			<debugger />

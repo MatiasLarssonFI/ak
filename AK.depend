@@ -232,16 +232,16 @@
 	"idbfactory.hxx"
 	<SQLiteCpp/SQLiteCpp.h>
 
-1491412908 /home/matias/project/ak/src/idbfactory.hxx
+1492540825 /home/matias/project/ak/src/idbfactory.hxx
 	"alias.hxx"
 	"idbobject.hxx"
 
-1491412908 /home/matias/project/ak/src/idbobject.hxx
+1492540626 /home/matias/project/ak/src/idbobject.hxx
 	<string>
 	"idbcursor.hxx"
 	"alias.hxx"
 
-1491412908 /home/matias/project/ak/src/idbcursor.hxx
+1492540105 /home/matias/project/ak/src/idbcursor.hxx
 
 1469511575 /home/matias/project/ak/src/lib/SQLiteCpp/include/SQLiteCpp/SQLiteCpp.h
 	<SQLiteCpp/Assertion.h>
@@ -276,7 +276,7 @@
 1469511575 /home/matias/project/ak/src/lib/SQLiteCpp/include/SQLiteCpp/Transaction.h
 	<SQLiteCpp/Exception.h>
 
-1491412908 /home/matias/project/ak/src/sqlite3dbcursor.hxx
+1492540149 /home/matias/project/ak/src/sqlite3dbcursor.hxx
 	<functional>
 	<vector>
 	<stdexcept>
@@ -316,12 +316,13 @@
 	<sqlite3.h>
 	<iostream>
 
-1469511575 source:/home/matias/project/ak/src/lib/SQLiteCpp/src/Database.cpp
+1492540168 source:/home/matias/project/ak/src/lib/SQLiteCpp/src/Database.cpp
 	<SQLiteCpp/Database.h>
 	<SQLiteCpp/Statement.h>
 	<SQLiteCpp/Assertion.h>
 	<SQLiteCpp/Exception.h>
 	<sqlite3.h>
+	<iostream>
 
 1469511575 source:/home/matias/project/ak/src/lib/SQLiteCpp/src/Statement.cpp
 	<SQLiteCpp/Statement.h>
@@ -349,7 +350,7 @@
 	"idbobject.hxx"
 	"alias.hxx"
 
-1491412908 source:/home/matias/project/ak/src/sqlite3dbobject.cxx
+1492541179 source:/home/matias/project/ak/src/sqlite3dbobject.cxx
 	"sqlite3dbobject.hxx"
 	<utility>
 	<stdexcept>
@@ -359,4 +360,17 @@
 1469511575 source:/home/matias/project/ak/src/lib/SQLiteCpp/src/Exception.cpp
 	<SQLiteCpp/Exception.h>
 	<sqlite3.h>
+
+1492539616 source:/home/matias/project/ak/src/cliinterface.cxx
+	"cliinterface.hxx"
+	<iostream>
+
+1492434655 /home/matias/project/ak/src/cliinterface.hxx
+	"streaminterface.hxx"
+
+1492540939 /home/matias/project/ak/src/streaminterface.hxx
+	<iostream>
+
+1492539665 source:/home/matias/project/ak/src/streaminterface.cxx
+	"streaminterface.hxx"
 
