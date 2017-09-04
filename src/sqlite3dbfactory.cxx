@@ -13,3 +13,8 @@ SQLite3DBFactory::SQLite3DBFactory(SQLite::Database& db)
 uptr<IDBObject> SQLite3DBFactory::getDBObject(std::string name) const {
     return uptr<IDBObject>(new SQLite3DBObject(std::move(name), m_db));
 }
+
+
+uptr<IDBObject> SQLite3DBFactory:: getDBObject(ObjectExpression const & expr) const {
+    return this->getDBObject(expr->objectName());
+}

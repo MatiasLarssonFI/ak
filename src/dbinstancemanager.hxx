@@ -7,6 +7,7 @@
 #include <SQLiteCpp/SQLiteCpp.h>
 
 
+//! Manages database object instances.
 class DBInstanceManager
 {
     public:
@@ -17,7 +18,10 @@ class DBInstanceManager
         DBInstanceManager(DBInstanceManager const &) = delete;
         DBInstanceManager& operator=(DBInstanceManager const &) = delete;
 
+        //! Returns the SQLite database object.
         t_db& getDB();
+
+        //! Returns the IDBFactory object
         t_db_f const & getDBFactory() const;
     private:
         t_db m_db;

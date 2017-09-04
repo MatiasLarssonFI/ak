@@ -69,7 +69,12 @@ class IDBObject
         virtual uptr<DBCursor> generalizationCursor() const = 0;
 
 
-        virtual ~IDBObject() {}
+        virtual ~IDBObject() = default;
+        // rule of zero. These must be defaulted since the destructor is user-defined.
+        IDBObject(IDBObject const &) = default;
+        IDBObject(IDBObject &&) = default;
+        IDBObject& operator=(IDBObject const &) = default;
+        IDBObject& operator=(IDBObject &&) = default;
 };
 
 #endif // IDBOBJECT_HXX

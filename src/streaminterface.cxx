@@ -21,11 +21,13 @@ void StreamInterface::listen() {
 }
 
 
-// A comment qabout the visitor:
+// A comment about the visitor:
 // using the visitor allows us to easily add new expressions
 // since we then only have to extend the parser implementation
-// and add the expression class. The only interface change will
-// go into the visitor.
+// and add the expression class. The only interface modification
+// will go into the visitor (that is, a new method).
+// Also, the visitor allows for unified handling here for the
+// polymorphic IRelationExpressions.
 void StreamInterface::lineHandler(std::string line) {
     try {
         RelationExpressionSaveVisitor save_visitor;

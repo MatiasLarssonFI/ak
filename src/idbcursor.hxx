@@ -17,7 +17,12 @@ class IDBCursor
         virtual bool hasNext() const = 0;
 
 
-        virtual ~IDBCursor() {}
+        virtual ~IDBCursor() = default;
+        // rule of zero. These must be defaulted since the destructor is user-defined.
+        IDBCursor(IDBCursor const &) = default;
+        IDBCursor(IDBCursor &&) = default;
+        IDBCursor& operator=(IDBCursor const &) = default;
+        IDBCursor& operator=(IDBCursor &&) = default;
 };
 
 #endif // IDBCURSOR_HXX

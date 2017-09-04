@@ -1,7 +1,12 @@
 #include "relationexpression.hxx"
 #include "alias.hxx"
 
-void GeneralizationRelationExpression::GeneralizationRelationExpression(uptr<ObjectExpression> composite, std::vector<ObjectExpression> components)
-    : m_composite(std::move(composite))
-    , m_components(std::move(components))
+void GeneralizationRelationExpression::GeneralizationRelationExpression(ObjectExpression generalization, std::vector<ObjectExpression> elements)
+    : m_gen(std::move(generalization))
+    , m_elems(std::move(elements))
 {}
+
+
+void GeneralizationRelationExpression::accept(RelationExpressionSaveVisitor & visitor) {
+    visitor.visit(*this);
+}
