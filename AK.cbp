@@ -62,16 +62,19 @@
 		</Unit>
 		<Unit filename="src/ak.cxx" />
 		<Unit filename="src/alias.hxx" />
+		<Unit filename="src/compositionrelationexpression.cxx" />
+		<Unit filename="src/compositionrelationexpression.hxx" />
 		<Unit filename="src/dbconfig.cxx" />
 		<Unit filename="src/dbconfig.hxx" />
 		<Unit filename="src/dbinstancemanager.cxx" />
 		<Unit filename="src/dbinstancemanager.hxx" />
 		<Unit filename="src/generalizationrelationexpression.cxx" />
 		<Unit filename="src/generalizationrelationexpression.hxx" />
+		<Unit filename="src/global_objects.hxx" />
 		<Unit filename="src/idbcursor.hxx" />
 		<Unit filename="src/idbfactory.hxx" />
 		<Unit filename="src/idbobject.hxx" />
-		<Unit filename="src/irelationwriteoperation.hxx" />
+		<Unit filename="src/irelationexpression.hxx" />
 		<Unit filename="src/lib/SQLiteCpp/include/SQLiteCpp/Assertion.h" />
 		<Unit filename="src/lib/SQLiteCpp/include/SQLiteCpp/Backup.h" />
 		<Unit filename="src/lib/SQLiteCpp/include/SQLiteCpp/Column.h" />
@@ -87,6 +90,10 @@
 		<Unit filename="src/lib/SQLiteCpp/src/Exception.cpp" />
 		<Unit filename="src/lib/SQLiteCpp/src/Statement.cpp" />
 		<Unit filename="src/lib/SQLiteCpp/src/Transaction.cpp" />
+		<Unit filename="src/objectexpression.cxx" />
+		<Unit filename="src/objectexpression.hxx" />
+		<Unit filename="src/relationexpressionsavevisitor.cxx" />
+		<Unit filename="src/relationexpressionsavevisitor.hxx" />
 		<Unit filename="src/sqlite3dbcursor.hxx" />
 		<Unit filename="src/sqlite3dbfactory.cxx" />
 		<Unit filename="src/sqlite3dbfactory.hxx" />
