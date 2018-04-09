@@ -1,0 +1,399 @@
+# depslib dependency file v1.0
+1478449311 source:/home/matias/C_CPP/Projektit/AK/unittest/AK-unittest/unittests.cxx
+	"UnitTest++/UnitTest++.h"
+	<string>
+	<stdexcept>
+	"objecttestfixture.hxx"
+	"alias.hxx"
+	"dbconfig.hxx"
+	"idbobject.hxx"
+
+1478448690 source:/home/matias/C_CPP/Projektit/AK/unittest/AK-unittest/objecttestfixture.cxx
+	<SQLiteCpp/SQLiteCpp.h>
+	<iostream>
+	"objecttestfixture.hxx"
+
+1478448187 /home/matias/C_CPP/Projektit/AK/unittest/AK-unittest/objecttestfixture.hxx
+	"alias.hxx"
+	"dbinstancemanager.hxx"
+
+1465401047 /home/matias/C_CPP/Projektit/AK/src/alias.hxx
+	<memory>
+	<iostream>
+
+1478437178 /home/matias/C_CPP/Projektit/AK/src/idbfactory.hxx
+	"alias.hxx"
+	"idbobject.hxx"
+
+1462736136 /home/matias/C_CPP/Projektit/AK/src/idbobject.hxx
+	<string>
+	"idbcursor.hxx"
+	"alias.hxx"
+
+1462379201 /home/matias/C_CPP/Projektit/AK/src/idbcursor.hxx
+
+1462732447 /home/matias/C_CPP/Projektit/AK/src/dbfactoryutil.cxx
+	"dbfactoryutil.hxx"
+	"idbfactory.hxx"
+	"sqlite3dbfactory.hxx"
+	"alias.hxx"
+
+1478438142 /home/matias/C_CPP/Projektit/AK/src/sqlite3dbfactory.hxx
+	<string>
+	"alias.hxx"
+	"idbfactory.hxx"
+	"idbobject.hxx"
+	<SQLiteCpp/SQLiteCpp.h>
+
+1478449089 /home/matias/C_CPP/Projektit/AK/src/sqlite3dbobject.hxx
+	<string>
+	<SQLiteCpp/SQLiteCpp.h>
+	"idbobject.hxx"
+	"alias.hxx"
+
+1451935889 /home/matias/C_CPP/Projektit/AK/src/lib/SQLiteCpp/include/SQLiteCpp/SQLiteCpp.h
+	<SQLiteCpp/Assertion.h>
+	<SQLiteCpp/Exception.h>
+	<SQLiteCpp/Database.h>
+	<SQLiteCpp/Statement.h>
+	<SQLiteCpp/Column.h>
+	<SQLiteCpp/Transaction.h>
+
+1451935889 /home/matias/C_CPP/Projektit/AK/src/lib/SQLiteCpp/include/SQLiteCpp/Assertion.h
+	<cassert>
+
+1451935889 /home/matias/C_CPP/Projektit/AK/src/lib/SQLiteCpp/include/SQLiteCpp/Exception.h
+	<stdexcept>
+	<string>
+
+1451935889 /home/matias/C_CPP/Projektit/AK/src/lib/SQLiteCpp/include/SQLiteCpp/Database.h
+	<sqlite3.h>
+	<SQLiteCpp/Column.h>
+	<string>
+
+1451935889 /home/matias/C_CPP/Projektit/AK/src/lib/SQLiteCpp/include/SQLiteCpp/Column.h
+	<sqlite3.h>
+	<SQLiteCpp/Statement.h>
+	<SQLiteCpp/Exception.h>
+	<string>
+
+1451935889 /home/matias/C_CPP/Projektit/AK/src/lib/SQLiteCpp/include/SQLiteCpp/Statement.h
+	<sqlite3.h>
+	<string>
+	<map>
+	<SQLiteCpp/Exception.h>
+
+1451935889 /home/matias/C_CPP/Projektit/AK/src/lib/SQLiteCpp/include/SQLiteCpp/Transaction.h
+	<SQLiteCpp/Exception.h>
+
+1478448986 /home/matias/C_CPP/Projektit/AK/src/sqlite3dbcursor.hxx
+	<functional>
+	<vector>
+	<stdexcept>
+	<SQLiteCpp/SQLiteCpp.h>
+	"idbcursor.hxx"
+	"alias.hxx"
+
+1462472656 source:/home/matias/C_CPP/Projektit/AK/unittest/AK-unittest/test_object_instance.cxx
+	"UnitTest++/UnitTest++.h"
+	"objecttestfixture.hxx"
+	"alias.hxx"
+
+1462472682 source:/home/matias/C_CPP/Projektit/AK/unittest/AK-unittest/test_object_load.cxx
+	"UnitTest++/UnitTest++.h"
+	"objecttestfixture.hxx"
+
+1462472686 source:/home/matias/C_CPP/Projektit/AK/unittest/AK-unittest/test_object_save.cxx
+	"UnitTest++/UnitTest++.h"
+	"objecttestfixture.hxx"
+
+1462472791 /home/matias/C_CPP/Projektit/AK/unittest/AK-unittest/test_object_save.cxx
+	"UnitTest++/UnitTest++.h"
+
+1462472787 /home/matias/C_CPP/Projektit/AK/unittest/AK-unittest/test_object_load.cxx
+	"UnitTest++/UnitTest++.h"
+
+1462474210 /home/matias/C_CPP/Projektit/AK/unittest/AK-unittest/src-tmp//alias.hxx
+	<memory>
+	<iostream>
+
+1462474210 /home/matias/C_CPP/Projektit/AK/unittest/AK-unittest/src-tmp//idbfactory.hxx
+	"alias.hxx"
+	"idbobject.hxx"
+
+1462474210 /home/matias/C_CPP/Projektit/AK/unittest/AK-unittest/src-tmp//idbobject.hxx
+	<string>
+	"idbcursor.hxx"
+	"alias.hxx"
+
+1462474210 /home/matias/C_CPP/Projektit/AK/unittest/AK-unittest/src-tmp//idbcursor.hxx
+
+1462474210 /home/matias/C_CPP/Projektit/AK/unittest/AK-unittest/src-tmp//dbfactoryutil.cxx
+	"sqlite3dbfactory.hxx"
+	"alias.hxx"
+
+1462474210 /home/matias/C_CPP/Projektit/AK/unittest/AK-unittest/src-tmp//sqlite3dbfactory.hxx
+	<string>
+	"alias.hxx"
+	"idbfactory.hxx"
+	"idbobject.hxx"
+
+1454001180 source:/home/matias/C_CPP/Projektit/AK/src/ak.cxx
+	<iostream>
+	<stdexcept>
+	<string>
+	<vector>
+	<algorithm>
+	"alias.hxx"
+	"sqlite3dbcursor.hxx"
+
+1462736599 source:/home/matias/C_CPP/Projektit/AK/src/dbconfig.cxx
+	"dbconfig.hxx"
+
+1456067330 /home/matias/C_CPP/Projektit/AK/src/dbconfig.hxx
+	<string>
+
+1478351047 source:/home/matias/C_CPP/Projektit/AK/src/dbfactoryutil.cxx
+	"dbfactoryutil.hxx"
+	"idbfactory.hxx"
+	"sqlite3dbfactory.hxx"
+	"alias.hxx"
+
+1451935889 source:/home/matias/C_CPP/Projektit/AK/src/lib/SQLiteCpp/examples/example1/main.cpp
+	<iostream>
+	<cstdio>
+	<cstdlib>
+	<string>
+	<SQLiteCpp/SQLiteCpp.h>
+
+1451935889 source:/home/matias/C_CPP/Projektit/AK/src/lib/SQLiteCpp/src/Backup.cpp
+	<SQLiteCpp/Backup.h>
+	<SQLiteCpp/Exception.h>
+	<string>
+
+1451935889 /home/matias/C_CPP/Projektit/AK/src/lib/SQLiteCpp/include/SQLiteCpp/Backup.h
+	<sqlite3.h>
+	<SQLiteCpp/Database.h>
+	<string>
+
+1451935889 source:/home/matias/C_CPP/Projektit/AK/src/lib/SQLiteCpp/src/Column.cpp
+	<SQLiteCpp/Column.h>
+	<iostream>
+
+1451935889 source:/home/matias/C_CPP/Projektit/AK/src/lib/SQLiteCpp/src/Database.cpp
+	<SQLiteCpp/Database.h>
+	<SQLiteCpp/Statement.h>
+	<SQLiteCpp/Assertion.h>
+	<SQLiteCpp/Exception.h>
+	<string>
+
+1465645268 source:/home/matias/C_CPP/Projektit/AK/src/lib/SQLiteCpp/src/Statement.cpp
+	<SQLiteCpp/Statement.h>
+	<SQLiteCpp/Database.h>
+	<SQLiteCpp/Column.h>
+	<SQLiteCpp/Assertion.h>
+	<SQLiteCpp/Exception.h>
+	<string>
+
+1451935889 source:/home/matias/C_CPP/Projektit/AK/src/lib/SQLiteCpp/src/Transaction.cpp
+	<SQLiteCpp/Transaction.h>
+	<SQLiteCpp/Database.h>
+	<SQLiteCpp/Assertion.h>
+
+1478438181 source:/home/matias/C_CPP/Projektit/AK/src/sqlite3dbfactory.cxx
+	<string>
+	"sqlite3dbfactory.hxx"
+	"idbobject.hxx"
+	"sqlite3dbobject.hxx"
+	"alias.hxx"
+
+1478438748 source:/home/matias/C_CPP/Projektit/AK/src/sqlite3dbobject.cxx
+	"sqlite3dbobject.hxx"
+	<utility>
+	<stdexcept>
+	"sqlite3dbcursor.hxx"
+	"alias.hxx"
+
+1478351083 /home/matias/C_CPP/Projektit/AK/src/dbfactoryutil.hxx
+	"idbfactory.hxx"
+	"alias.hxx"
+
+1465642362 /home/matias/C_CPP/Projektit/AK/src/dbinstanceutil.hxx
+	<SQLiteCpp/SQLiteCpp.h>
+
+1465642352 source:/home/matias/C_CPP/Projektit/AK/src/dbinstanceutil.cxx
+	"dbinstanceutil.hxx"
+	"dbconfig.hxx"
+	<SQLiteCpp/SQLiteCpp.h>
+
+1478449141 source:/home/matias/C_CPP/Projektit/AK/src/dbinstancemanager.cxx
+	"dbinstancemanager.hxx"
+	"dbconfig.hxx"
+	"sqlite3dbfactory.hxx"
+	<stdexcept>
+	<SQLiteCpp/SQLiteCpp.h>
+
+1478438656 /home/matias/C_CPP/Projektit/AK/src/dbinstancemanager.hxx
+	"alias.hxx"
+	"idbfactory.hxx"
+	<SQLiteCpp/SQLiteCpp.h>
+
+1491412908 source:/home/matias/project/ak/src/dbconfig.cxx
+	"dbconfig.hxx"
+
+1491412908 /home/matias/project/ak/src/dbconfig.hxx
+	<string>
+
+1491412975 source:/home/matias/project/ak/src/dbinstancemanager.cxx
+	"dbinstancemanager.hxx"
+	"dbconfig.hxx"
+	"sqlite3dbfactory.hxx"
+	<stdexcept>
+	<SQLiteCpp/SQLiteCpp.h>
+	<sqlite3.h>
+
+1491412908 /home/matias/project/ak/src/dbinstancemanager.hxx
+	"alias.hxx"
+	"idbfactory.hxx"
+	<SQLiteCpp/SQLiteCpp.h>
+
+1491412908 /home/matias/project/ak/src/alias.hxx
+	<memory>
+	<iostream>
+
+1492540825 /home/matias/project/ak/src/idbfactory.hxx
+	"alias.hxx"
+	"idbobject.hxx"
+
+1492540626 /home/matias/project/ak/src/idbobject.hxx
+	<string>
+	"idbcursor.hxx"
+	"alias.hxx"
+
+1492540105 /home/matias/project/ak/src/idbcursor.hxx
+
+1469511575 /home/matias/project/ak/src/lib/SQLiteCpp/include/SQLiteCpp/SQLiteCpp.h
+	<SQLiteCpp/Assertion.h>
+	<SQLiteCpp/Exception.h>
+	<SQLiteCpp/Database.h>
+	<SQLiteCpp/Statement.h>
+	<SQLiteCpp/Column.h>
+	<SQLiteCpp/Transaction.h>
+
+1469511575 /home/matias/project/ak/src/lib/SQLiteCpp/include/SQLiteCpp/Assertion.h
+	<cassert>
+
+1469511575 /home/matias/project/ak/src/lib/SQLiteCpp/include/SQLiteCpp/Exception.h
+	<stdexcept>
+	<string>
+
+1469511575 /home/matias/project/ak/src/lib/SQLiteCpp/include/SQLiteCpp/Database.h
+	<SQLiteCpp/Column.h>
+	<string>
+
+1469511575 /home/matias/project/ak/src/lib/SQLiteCpp/include/SQLiteCpp/Column.h
+	<SQLiteCpp/Statement.h>
+	<SQLiteCpp/Exception.h>
+	<string>
+	<limits.h>
+
+1469511575 /home/matias/project/ak/src/lib/SQLiteCpp/include/SQLiteCpp/Statement.h
+	<SQLiteCpp/Exception.h>
+	<string>
+	<map>
+
+1469511575 /home/matias/project/ak/src/lib/SQLiteCpp/include/SQLiteCpp/Transaction.h
+	<SQLiteCpp/Exception.h>
+
+1491412908 /home/matias/project/ak/src/sqlite3dbfactory.hxx
+	<string>
+	"alias.hxx"
+	"idbfactory.hxx"
+	"idbobject.hxx"
+	<SQLiteCpp/SQLiteCpp.h>
+
+1469511575 source:/home/matias/project/ak/src/lib/SQLiteCpp/src/Backup.cpp
+	<SQLiteCpp/Backup.h>
+	<SQLiteCpp/Exception.h>
+	<sqlite3.h>
+
+1469511575 /home/matias/project/ak/src/lib/SQLiteCpp/include/SQLiteCpp/Backup.h
+	<SQLiteCpp/Database.h>
+	<string>
+
+1469511575 source:/home/matias/project/ak/src/lib/SQLiteCpp/src/Column.cpp
+	<SQLiteCpp/Column.h>
+	<sqlite3.h>
+	<iostream>
+
+1469511575 source:/home/matias/project/ak/src/lib/SQLiteCpp/src/Database.cpp
+	<SQLiteCpp/Database.h>
+	<SQLiteCpp/Statement.h>
+	<SQLiteCpp/Assertion.h>
+	<SQLiteCpp/Exception.h>
+	<sqlite3.h>
+
+1469511575 source:/home/matias/project/ak/src/lib/SQLiteCpp/src/Statement.cpp
+	<SQLiteCpp/Statement.h>
+	<SQLiteCpp/Database.h>
+	<SQLiteCpp/Column.h>
+	<SQLiteCpp/Assertion.h>
+	<SQLiteCpp/Exception.h>
+	<sqlite3.h>
+
+1469511575 source:/home/matias/project/ak/src/lib/SQLiteCpp/src/Transaction.cpp
+	<SQLiteCpp/Transaction.h>
+	<SQLiteCpp/Database.h>
+	<SQLiteCpp/Assertion.h>
+
+1491412908 source:/home/matias/project/ak/src/sqlite3dbfactory.cxx
+	<string>
+	"sqlite3dbfactory.hxx"
+	"idbobject.hxx"
+	"sqlite3dbobject.hxx"
+	"alias.hxx"
+
+1491412908 /home/matias/project/ak/src/sqlite3dbobject.hxx
+	<string>
+	<SQLiteCpp/SQLiteCpp.h>
+	"idbobject.hxx"
+	"alias.hxx"
+
+1492429909 source:/home/matias/project/ak/src/sqlite3dbobject.cxx
+	"sqlite3dbobject.hxx"
+	<utility>
+	<stdexcept>
+	"sqlite3dbcursor.hxx"
+	"alias.hxx"
+
+1491412908 /home/matias/project/ak/src/sqlite3dbcursor.hxx
+	<functional>
+	<vector>
+	<stdexcept>
+	<SQLiteCpp/SQLiteCpp.h>
+	"idbcursor.hxx"
+	"alias.hxx"
+
+1491412908 source:/home/matias/project/ak/unittest/AK-unittest/objecttestfixture.cxx
+	<SQLiteCpp/SQLiteCpp.h>
+	<iostream>
+	"objecttestfixture.hxx"
+
+1491412908 /home/matias/project/ak/unittest/AK-unittest/objecttestfixture.hxx
+	"alias.hxx"
+	"dbinstancemanager.hxx"
+
+1492433014 source:/home/matias/project/ak/unittest/AK-unittest/unittests.cxx
+	"UnitTest++/UnitTest++.h"
+	<string>
+	<stdexcept>
+	<algorithm>
+	"objecttestfixture.hxx"
+	"alias.hxx"
+	"dbconfig.hxx"
+	"idbobject.hxx"
+
+1469511575 source:/home/matias/project/ak/src/lib/SQLiteCpp/src/Exception.cpp
+	<SQLiteCpp/Exception.h>
+	<sqlite3.h>
+

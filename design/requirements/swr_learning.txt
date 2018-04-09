@@ -1,33 +1,14 @@
-07.12.2014 00:57:09
 swr#learning
 
 Software shall offer an interface through which new information is
 passed. Software shall evaluate the input and do appropiate changes
-(described later) to the database [1] according to passed information.
+to the database [1] according to passed information.
 
 The interface shall support these functions:
     - add an object
-    - associate an object with a property
+    - associate an object with a component
     - associate an object with a generalization
 
-When adding an object the interface shall accept one argument: the name
-of the object.
 
-//The interface returns a pair: first is a list of
-//generalizations found for the object name. second is a callable that
-//takes one generalization as an argument, adds the object and associates
-//it with the generalization.
-
-
-When passed a new property association the learning interface shall
-accept two arguments: name of the object and name of the property. The
-software shall associate the object with the property in the database:
-    These actions are performed in a separate thread:
-        - If the object doesn't exist it is inserted into the 'objects'
-          table.
-        - If the property doesn't exist it is inserted into the
-          'objects' table.
-    
-    
 References:
 1. swr#database

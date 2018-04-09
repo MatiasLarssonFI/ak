@@ -7,16 +7,21 @@
 		<Option compiler="gcc" />
 		<Build>
 			<Target title="Debug">
-				<Option output="bin/debug/AK" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/debug/ak" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="bin/debug" />
 				<Option object_output="obj/debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
+				<Option parameters="../../data/data.db" />
 				<Compiler>
+					<Add option="-Wfloat-equal" />
+					<Add option="-Wunreachable-code" />
+					<Add option="-Wswitch-enum" />
+					<Add option="-pedantic" />
 					<Add option="-std=c++11" />
 					<Add option="-Wextra" />
 					<Add option="-Wall" />
 					<Add option="-g" />
-					<Add directory="src" />
 					<Add directory="src/lib/SQLiteCpp/include" />
 				</Compiler>
 				<Linker>
@@ -24,12 +29,17 @@
 				</Linker>
 			</Target>
 			<Target title="Release">
-				<Option output="bin/release/AK" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/release/ak" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
 				<Option object_output="obj/release/" />
-				<Option type="1" />
+				<Option type="5" />
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add option="-std=c++11" />
+					<Add option="-Wextra" />
+					<Add option="-Wall" />
+					<Add directory="src" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -39,14 +49,45 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="data/schema.sql" />
+		<Unit filename="design/requirements/swr_database.txt">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="design/requirements/swr_implementation-language.txt">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="design/requirements/swr_learning.txt">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
 		<Unit filename="src/ak.cxx" />
-		<Unit filename="src/dbobject.cxx" />
-		<Unit filename="src/dbobject.hxx" />
+		<Unit filename="src/alias.hxx" />
+		<Unit filename="src/dbconfig.cxx" />
+		<Unit filename="src/dbconfig.hxx" />
+		<Unit filename="src/dbinstancemanager.cxx" />
+		<Unit filename="src/dbinstancemanager.hxx" />
+		<Unit filename="src/idbcursor.hxx" />
+		<Unit filename="src/idbfactory.hxx" />
+		<Unit filename="src/idbobject.hxx" />
+		<Unit filename="src/lib/SQLiteCpp/include/SQLiteCpp/Assertion.h" />
+		<Unit filename="src/lib/SQLiteCpp/include/SQLiteCpp/Backup.h" />
+		<Unit filename="src/lib/SQLiteCpp/include/SQLiteCpp/Column.h" />
+		<Unit filename="src/lib/SQLiteCpp/include/SQLiteCpp/Database.h" />
+		<Unit filename="src/lib/SQLiteCpp/include/SQLiteCpp/Exception.h" />
+		<Unit filename="src/lib/SQLiteCpp/include/SQLiteCpp/SQLiteCpp.h" />
+		<Unit filename="src/lib/SQLiteCpp/include/SQLiteCpp/Statement.h" />
+		<Unit filename="src/lib/SQLiteCpp/include/SQLiteCpp/Transaction.h" />
+		<Unit filename="src/lib/SQLiteCpp/include/SQLiteCpp/VariadicBind.h" />
 		<Unit filename="src/lib/SQLiteCpp/src/Backup.cpp" />
 		<Unit filename="src/lib/SQLiteCpp/src/Column.cpp" />
 		<Unit filename="src/lib/SQLiteCpp/src/Database.cpp" />
+		<Unit filename="src/lib/SQLiteCpp/src/Exception.cpp" />
 		<Unit filename="src/lib/SQLiteCpp/src/Statement.cpp" />
 		<Unit filename="src/lib/SQLiteCpp/src/Transaction.cpp" />
+		<Unit filename="src/sqlite3dbcursor.hxx" />
+		<Unit filename="src/sqlite3dbfactory.cxx" />
+		<Unit filename="src/sqlite3dbfactory.hxx" />
+		<Unit filename="src/sqlite3dbobject.cxx" />
+		<Unit filename="src/sqlite3dbobject.hxx" />
 		<Extensions>
 			<code_completion />
 			<debugger />
