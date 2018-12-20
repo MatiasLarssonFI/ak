@@ -1,2 +1,2 @@
 # ak
-Connecting information in a database.
+Database abstraction for connecting information.
