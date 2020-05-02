@@ -1,0 +1,4 @@
+[submodule "src/lib/SQLiteCpp"]
+	path = src/lib/SQLiteCpp
+	url = https://github.com/SRombauts/SQLiteCpp.git
+	branch = sqlitecpp-2.x
