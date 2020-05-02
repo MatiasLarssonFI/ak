@@ -210,7 +210,7 @@
 	<stdexcept>
 	<SQLiteCpp/SQLiteCpp.h>
 
-1491660920 source:/home/matias/project/ak/src/ak.cxx
+1586893100 source:/home/matias/project/ak/src/ak.cxx
 	<iostream>
 	<stdexcept>
 	<string>
@@ -219,31 +219,33 @@
 	"dbconfig.hxx"
 	"dbinstancemanager.hxx"
 	"sqlite3dbcursor.hxx"
+	"streaminterface.hxx"
 
-1491412908 /home/matias/project/ak/src/alias.hxx
+1523294745 /home/matias/project/ak/src/alias.hxx
 	<memory>
 	<iostream>
 
-1491412908 /home/matias/project/ak/src/dbconfig.hxx
+1523294745 /home/matias/project/ak/src/dbconfig.hxx
 	<string>
 
-1491412908 /home/matias/project/ak/src/dbinstancemanager.hxx
+1586782102 /home/matias/project/ak/src/dbinstancemanager.hxx
 	"alias.hxx"
 	"idbfactory.hxx"
 	<SQLiteCpp/SQLiteCpp.h>
 
-1492540825 /home/matias/project/ak/src/idbfactory.hxx
+1588437066 /home/matias/project/ak/src/idbfactory.hxx
 	"alias.hxx"
 	"idbobject.hxx"
+	"objectexpression.hxx"
 
-1492540626 /home/matias/project/ak/src/idbobject.hxx
+1588437136 /home/matias/project/ak/src/idbobject.hxx
 	<string>
 	"idbcursor.hxx"
 	"alias.hxx"
 
-1492540105 /home/matias/project/ak/src/idbcursor.hxx
+1588437294 /home/matias/project/ak/src/idbcursor.hxx
 
-1469511575 /home/matias/project/ak/src/lib/SQLiteCpp/include/SQLiteCpp/SQLiteCpp.h
+1588436619 /home/matias/project/ak/src/lib/SQLiteCpp/include/SQLiteCpp/SQLiteCpp.h
 	<SQLiteCpp/Assertion.h>
 	<SQLiteCpp/Exception.h>
 	<SQLiteCpp/Database.h>
@@ -251,32 +253,34 @@
 	<SQLiteCpp/Column.h>
 	<SQLiteCpp/Transaction.h>
 
-1469511575 /home/matias/project/ak/src/lib/SQLiteCpp/include/SQLiteCpp/Assertion.h
+1588436619 /home/matias/project/ak/src/lib/SQLiteCpp/include/SQLiteCpp/Assertion.h
 	<cassert>
 
-1469511575 /home/matias/project/ak/src/lib/SQLiteCpp/include/SQLiteCpp/Exception.h
+1588436619 /home/matias/project/ak/src/lib/SQLiteCpp/include/SQLiteCpp/Exception.h
 	<stdexcept>
 	<string>
 
-1469511575 /home/matias/project/ak/src/lib/SQLiteCpp/include/SQLiteCpp/Database.h
+1588436619 /home/matias/project/ak/src/lib/SQLiteCpp/include/SQLiteCpp/Database.h
 	<SQLiteCpp/Column.h>
-	<string>
+	<SQLiteCpp/Utils.h>
+	<string.h>
 
-1469511575 /home/matias/project/ak/src/lib/SQLiteCpp/include/SQLiteCpp/Column.h
+1588436619 /home/matias/project/ak/src/lib/SQLiteCpp/include/SQLiteCpp/Column.h
 	<SQLiteCpp/Statement.h>
 	<SQLiteCpp/Exception.h>
 	<string>
-	<limits.h>
+	<climits>
 
-1469511575 /home/matias/project/ak/src/lib/SQLiteCpp/include/SQLiteCpp/Statement.h
+1588436619 /home/matias/project/ak/src/lib/SQLiteCpp/include/SQLiteCpp/Statement.h
 	<SQLiteCpp/Exception.h>
 	<string>
 	<map>
+	<climits>
 
-1469511575 /home/matias/project/ak/src/lib/SQLiteCpp/include/SQLiteCpp/Transaction.h
+1588436619 /home/matias/project/ak/src/lib/SQLiteCpp/include/SQLiteCpp/Transaction.h
 	<SQLiteCpp/Exception.h>
 
-1492540149 /home/matias/project/ak/src/sqlite3dbcursor.hxx
+1523294745 /home/matias/project/ak/src/sqlite3dbcursor.hxx
 	<functional>
 	<vector>
 	<stdexcept>
@@ -284,10 +288,10 @@
 	"idbcursor.hxx"
 	"alias.hxx"
 
-1491412908 source:/home/matias/project/ak/src/dbconfig.cxx
+1523294745 source:/home/matias/project/ak/src/dbconfig.cxx
 	"dbconfig.hxx"
 
-1491412975 source:/home/matias/project/ak/src/dbinstancemanager.cxx
+1523294745 source:/home/matias/project/ak/src/dbinstancemanager.cxx
 	"dbinstancemanager.hxx"
 	"dbconfig.hxx"
 	"sqlite3dbfactory.hxx"
@@ -295,36 +299,38 @@
 	<SQLiteCpp/SQLiteCpp.h>
 	<sqlite3.h>
 
-1491412908 /home/matias/project/ak/src/sqlite3dbfactory.hxx
+1588433507 /home/matias/project/ak/src/sqlite3dbfactory.hxx
 	<string>
 	"alias.hxx"
 	"idbfactory.hxx"
 	"idbobject.hxx"
+	"objectexpression.hxx"
 	<SQLiteCpp/SQLiteCpp.h>
 
-1469511575 source:/home/matias/project/ak/src/lib/SQLiteCpp/src/Backup.cpp
+1588436619 source:/home/matias/project/ak/src/lib/SQLiteCpp/src/Backup.cpp
 	<SQLiteCpp/Backup.h>
 	<SQLiteCpp/Exception.h>
 	<sqlite3.h>
 
-1469511575 /home/matias/project/ak/src/lib/SQLiteCpp/include/SQLiteCpp/Backup.h
+1588436619 /home/matias/project/ak/src/lib/SQLiteCpp/include/SQLiteCpp/Backup.h
 	<SQLiteCpp/Database.h>
 	<string>
 
-1469511575 source:/home/matias/project/ak/src/lib/SQLiteCpp/src/Column.cpp
+1588436619 source:/home/matias/project/ak/src/lib/SQLiteCpp/src/Column.cpp
 	<SQLiteCpp/Column.h>
 	<sqlite3.h>
 	<iostream>
 
-1492540168 source:/home/matias/project/ak/src/lib/SQLiteCpp/src/Database.cpp
+1588436619 source:/home/matias/project/ak/src/lib/SQLiteCpp/src/Database.cpp
 	<SQLiteCpp/Database.h>
 	<SQLiteCpp/Statement.h>
 	<SQLiteCpp/Assertion.h>
 	<SQLiteCpp/Exception.h>
 	<sqlite3.h>
-	<iostream>
+	<fstream>
+	<string.h>
 
-1469511575 source:/home/matias/project/ak/src/lib/SQLiteCpp/src/Statement.cpp
+1588436619 source:/home/matias/project/ak/src/lib/SQLiteCpp/src/Statement.cpp
 	<SQLiteCpp/Statement.h>
 	<SQLiteCpp/Database.h>
 	<SQLiteCpp/Column.h>
@@ -332,32 +338,32 @@
 	<SQLiteCpp/Exception.h>
 	<sqlite3.h>
 
-1469511575 source:/home/matias/project/ak/src/lib/SQLiteCpp/src/Transaction.cpp
+1588436619 source:/home/matias/project/ak/src/lib/SQLiteCpp/src/Transaction.cpp
 	<SQLiteCpp/Transaction.h>
 	<SQLiteCpp/Database.h>
 	<SQLiteCpp/Assertion.h>
 
-1491412908 source:/home/matias/project/ak/src/sqlite3dbfactory.cxx
+1586784341 source:/home/matias/project/ak/src/sqlite3dbfactory.cxx
 	<string>
 	"sqlite3dbfactory.hxx"
 	"idbobject.hxx"
 	"sqlite3dbobject.hxx"
 	"alias.hxx"
 
-1491412908 /home/matias/project/ak/src/sqlite3dbobject.hxx
+1523294745 /home/matias/project/ak/src/sqlite3dbobject.hxx
 	<string>
 	<SQLiteCpp/SQLiteCpp.h>
 	"idbobject.hxx"
 	"alias.hxx"
 
-1492541179 source:/home/matias/project/ak/src/sqlite3dbobject.cxx
+1523294745 source:/home/matias/project/ak/src/sqlite3dbobject.cxx
 	"sqlite3dbobject.hxx"
 	<utility>
 	<stdexcept>
 	"sqlite3dbcursor.hxx"
 	"alias.hxx"
 
-1469511575 source:/home/matias/project/ak/src/lib/SQLiteCpp/src/Exception.cpp
+1588436619 source:/home/matias/project/ak/src/lib/SQLiteCpp/src/Exception.cpp
 	<SQLiteCpp/Exception.h>
 	<sqlite3.h>
 
@@ -368,9 +374,85 @@
 1492434655 /home/matias/project/ak/src/cliinterface.hxx
 	"streaminterface.hxx"
 
-1492540939 /home/matias/project/ak/src/streaminterface.hxx
+1586782102 /home/matias/project/ak/src/streaminterface.hxx
+	"relationexpressionparser.hxx"
 	<iostream>
 
 1492539665 source:/home/matias/project/ak/src/streaminterface.cxx
 	"streaminterface.hxx"
+
+1588434810 /home/matias/project/ak/src/objectexpression.hxx
+	<string>
+	"irelationexpression.hxx"
+
+1588432983 /home/matias/project/ak/src/irelationexpression.hxx
+	"irelationexpressionvisitor.hxx"
+	"alias.hxx"
+
+1588437504 /home/matias/project/ak/src/relationexpressionsavevisitor.hxx
+	"irelationexpressionvisitor.hxx"
+	"generalizationrelationexpression.hxx"
+	"compositionrelationexpression.hxx"
+	"objectexpression.hxx"
+
+1588435220 /home/matias/project/ak/src/generalizationrelationexpression.hxx
+	<vector>
+	"irelationexpression.hxx"
+	"objectexpression.hxx"
+	"irelationexpressionvisitor.hxx"
+	"alias.hxx"
+
+1588435233 /home/matias/project/ak/src/compositionrelationexpression.hxx
+	<vector>
+	"irelationexpression.hxx"
+	"objectexpression.hxx"
+	"irelationexpressionvisitor.hxx"
+	"alias.hxx"
+
+1588437472 /home/matias/project/ak/src/irelationexpressionvisitor.hxx
+
+1588435003 /home/matias/project/ak/src/relationexpressionparser.hxx
+	<string>
+	<vector>
+	"irelationexpression.hxx"
+	"objectexpression.hxx"
+	"compositionrelationexpression.hxx"
+	"generalizationrelationexpression.hxx"
+	"alias.hxx"
+
+1588432811 source:/home/matias/project/ak/src/compositionrelationexpression.cxx
+	"compositionrelationexpression.hxx"
+	"alias.hxx"
+
+1588436619 /home/matias/project/ak/src/lib/SQLiteCpp/include/SQLiteCpp/Utils.h
+	<cstddef>
+
+1588432817 source:/home/matias/project/ak/src/generalizationrelationexpression.cxx
+	"generalizationrelationexpression.hxx"
+	"alias.hxx"
+
+1588434797 source:/home/matias/project/ak/src/objectexpression.cxx
+	"objectexpression.hxx"
+
+1588434951 source:/home/matias/project/ak/src/relationexpressionparser.cxx
+	<algorithm>
+	<sstream>
+	<string>
+	"relationexpressionparser.hxx"
+	"relationexpressionsyntaxerror.hxx"
+
+1586782102 /home/matias/project/ak/src/relationexpressionsyntaxerror.hxx
+	<stdexcept>
+
+1588436974 source:/home/matias/project/ak/src/relationexpressionsavevisitor.cxx
+	"relationexpressionsavevisitor.hxx"
+	<vector>
+	"alias.hxx"
+	"global_objects.hxx"
+	"objectexpression.hxx"
+
+1588435032 /home/matias/project/ak/src/global_objects.hxx
+	<memory>
+	<iostream>
+	"dbinstancemanager.hxx"
 

@@ -14,13 +14,25 @@
 				<Option compiler="gcc" />
 				<Option parameters="../../data/data.db" />
 				<Compiler>
+					<Add option="-Wnon-virtual-dtor" />
+					<Add option="-Wshadow" />
+					<Add option="-Winit-self" />
+					<Add option="-Wredundant-decls" />
+					<Add option="-Wcast-align" />
+					<Add option="-Wundef" />
 					<Add option="-Wfloat-equal" />
+					<Add option="-Winline" />
 					<Add option="-Wunreachable-code" />
+					<Add option="-Wmissing-declarations" />
+					<Add option="-Wmissing-include-dirs" />
 					<Add option="-Wswitch-enum" />
+					<Add option="-Wswitch-default" />
+					<Add option="-Wmain" />
+					<Add option="-pedantic-errors" />
 					<Add option="-pedantic" />
-					<Add option="-std=c++11" />
 					<Add option="-Wextra" />
 					<Add option="-Wall" />
+					<Add option="-std=c++14" />
 					<Add option="-g" />
 					<Add directory="src/lib/SQLiteCpp/include" />
 					<Add directory="src" />
@@ -37,9 +49,25 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
-					<Add option="-std=c++11" />
+					<Add option="-Wnon-virtual-dtor" />
+					<Add option="-Wshadow" />
+					<Add option="-Winit-self" />
+					<Add option="-Wredundant-decls" />
+					<Add option="-Wcast-align" />
+					<Add option="-Wundef" />
+					<Add option="-Wfloat-equal" />
+					<Add option="-Winline" />
+					<Add option="-Wunreachable-code" />
+					<Add option="-Wmissing-declarations" />
+					<Add option="-Wmissing-include-dirs" />
+					<Add option="-Wswitch-enum" />
+					<Add option="-Wswitch-default" />
+					<Add option="-Wmain" />
+					<Add option="-pedantic-errors" />
+					<Add option="-pedantic" />
 					<Add option="-Wextra" />
 					<Add option="-Wall" />
+					<Add option="-std=c++14" />
 					<Add directory="src" />
 				</Compiler>
 				<Linker>
@@ -75,6 +103,7 @@
 		<Unit filename="src/idbfactory.hxx" />
 		<Unit filename="src/idbobject.hxx" />
 		<Unit filename="src/irelationexpression.hxx" />
+		<Unit filename="src/irelationexpressionvisitor.hxx" />
 		<Unit filename="src/lib/SQLiteCpp/include/SQLiteCpp/Assertion.h" />
 		<Unit filename="src/lib/SQLiteCpp/include/SQLiteCpp/Backup.h" />
 		<Unit filename="src/lib/SQLiteCpp/include/SQLiteCpp/Column.h" />
@@ -92,8 +121,11 @@
 		<Unit filename="src/lib/SQLiteCpp/src/Transaction.cpp" />
 		<Unit filename="src/objectexpression.cxx" />
 		<Unit filename="src/objectexpression.hxx" />
+		<Unit filename="src/relationexpressionparser.cxx" />
+		<Unit filename="src/relationexpressionparser.hxx" />
 		<Unit filename="src/relationexpressionsavevisitor.cxx" />
 		<Unit filename="src/relationexpressionsavevisitor.hxx" />
+		<Unit filename="src/relationexpressionsyntaxerror.hxx" />
 		<Unit filename="src/sqlite3dbcursor.hxx" />
 		<Unit filename="src/sqlite3dbfactory.cxx" />
 		<Unit filename="src/sqlite3dbfactory.hxx" />
