@@ -15,6 +15,6 @@ uptr<IDBObject> SQLite3DBFactory::getDBObject(std::string name) const {
 }
 
 
-uptr<IDBObject> SQLite3DBFactory:: getDBObject(ObjectExpression const & expr) const {
-    return this->getDBObject(expr->objectName());
+uptr<IDBObject> SQLite3DBFactory::getDBObject(ObjectExpression const & expr) const {
+    return this->getDBObject(expr.objectName());
 }

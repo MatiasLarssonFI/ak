@@ -1,12 +1,12 @@
-#include "relationexpression.hxx"
+#include "generalizationrelationexpression.hxx"
 #include "alias.hxx"
 
-void GeneralizationRelationExpression::GeneralizationRelationExpression(ObjectExpression generalization, std::vector<ObjectExpression> elements)
+GeneralizationRelationExpression::GeneralizationRelationExpression(ObjectExpression generalization, std::vector<ObjectExpression> elements)
     : m_gen(std::move(generalization))
     , m_elems(std::move(elements))
 {}
 
 
-void GeneralizationRelationExpression::accept(RelationExpressionSaveVisitor & visitor) {
+void GeneralizationRelationExpression::accept(IRelationExpressionVisitor & visitor) {
     visitor.visit(*this);
 }

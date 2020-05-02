@@ -1,7 +1,6 @@
 #include <string>
 
 #include "streaminterface.hxx"
-#include "relationexpression.hxx"
 #include "alias.hxx"
 #include "irelationexpression.hxx"
 #include "relationexpressionsyntaxerror.hxx"
@@ -10,14 +9,16 @@
 StreamInterface::StreamInterface(std::istream& in, std::ostream& out)
     : m_in(in)
     , m_out(out)
-    , m_relex_parser()
+    , m_relexp_parser()
 {}
 
 
 void StreamInterface::listen() {
     std::string line;
-    std::getline(m_in, line);
-    this->lineHandler(line);
+    do {
+        std::getline(m_in, line);
+        this->lineHandler(line);
+    } while (line != "q");
 }
 
 
@@ -31,7 +32,8 @@ void StreamInterface::listen() {
 void StreamInterface::lineHandler(std::string line) {
     try {
         RelationExpressionSaveVisitor save_visitor;
-        for (uptr<IRelationExpression> expr : m_relexp_parser->from_line(line)) {
+        uptr<IRelationExpression> expr = m_relexp_parser.fromLine(line);
+        if (expr) {
             expr->accept(save_visitor);
         }
     } catch (RelationExpressionSyntaxError const & e) {

@@ -5,24 +5,24 @@
 
 #include "irelationexpression.hxx"
 #include "objectexpression.hxx"
-#include "relationexpressionsavevisitor.hxx"
+#include "irelationexpressionvisitor.hxx"
 #include "alias.hxx"
 
 
 class GeneralizationRelationExpression : public IRelationExpression
 {
     public:
-        void GeneralizationRelationExpression(ObjectExpression generalization, std::vector<ObjectExpression> elems);
-        void accept(RelationExpressionSaveVisitor &);
+        GeneralizationRelationExpression(ObjectExpression generalization, std::vector<ObjectExpression> elems);
+        void accept(IRelationExpressionVisitor &);
 
-        //! Returns the composite object for the expression.
-        ObjectExpression const & generalization() const { return m_gen; }:
+        //! Returns the generalization object for the expression.
+        ObjectExpression & generalization() { return m_gen; };
 
-        //! Returns the
-        std::vector<ObjectExpression> const & elements() const { return m_elems; }:
+        //! Returns the generalized objects for the expression.
+        std::vector<ObjectExpression> & elements() { return m_elems; };
     private:
-        ObjectExpression const m_gen;
-        std::vector<ObjectExpression> const m_elems;
+        ObjectExpression m_gen;
+        std::vector<ObjectExpression> m_elems;
 };
 
 #endif // GENERALIZATIONRELATIONEXPRESSION_HXX

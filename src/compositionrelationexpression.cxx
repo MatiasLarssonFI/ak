@@ -1,12 +1,13 @@
-#include "relationexpression.hxx"
+#include "compositionrelationexpression.hxx"
+
 #include "alias.hxx"
 
-void CompositionRelationExpression::GeneralizationRelationExpression(ObjectExpression composite, std::vector<ObjectExpression> components)
+CompositionRelationExpression::CompositionRelationExpression(ObjectExpression composite, std::vector<ObjectExpression> components)
     : m_composite(std::move(composite))
     , m_components(std::move(components))
 {}
 
 
-void CompositionRelationExpression::accept(RelationExpressionSaveVisitor & visitor) {
+void CompositionRelationExpression::accept(IRelationExpressionVisitor & visitor) {
     visitor.visit(*this);
 }

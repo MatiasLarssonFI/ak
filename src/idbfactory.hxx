@@ -8,8 +8,10 @@
 class IDBFactory
 {
     public:
+        IDBFactory() = default;
+
         virtual uptr<IDBObject> getDBObject(std::string name) const = 0;
-        virtual uptr<IDBObject> getDBObject(ObjectExpression const &) const = 0;
+        virtual uptr<IDBObject> getDBObject(ObjectExpression const & expr) const = 0;
         virtual ~IDBFactory() = default;
         // rule of zero. These must be defaulted since the destructor is user-defined.
         IDBFactory(IDBFactory const &) = default;

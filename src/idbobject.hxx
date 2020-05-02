@@ -11,6 +11,8 @@
 class IDBObject
 {
     public:
+        IDBObject() = default;
+
         using DBCursor = IDBCursor<uptr<IDBObject>>;
 
         //! Returns the object's name

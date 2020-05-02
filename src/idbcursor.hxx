@@ -6,6 +6,8 @@ template <class T>
 class IDBCursor
 {
     public:
+        IDBCursor() = default;
+
         //! Returns the next object under cursor
         /*!
          * \throw std::runtime_error If there are no more rows in squence

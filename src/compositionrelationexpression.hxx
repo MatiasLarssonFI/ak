@@ -5,24 +5,24 @@
 
 #include "irelationexpression.hxx"
 #include "objectexpression.hxx"
-#include "relationexpressionsavevisitor.hxx"
+#include "irelationexpressionvisitor.hxx"
 #include "alias.hxx"
 
 
 class CompositionRelationExpression : public IRelationExpression
 {
     public:
-        void CompositionRelationExpression(ObjectExpression composite, std::vector<ObjectExpression> components);
-        void accept(RelationExpressionSaveVisitor &);
+        CompositionRelationExpression(ObjectExpression composite, std::vector<ObjectExpression> components);
+        void accept(IRelationExpressionVisitor &);
 
         //! Returns the composite object for the expression.
-        ObjectExpression const & composite() const { return m_composite; }:
+        ObjectExpression & composite() { return m_composite; };
 
         //! Returns the component objects for the expression.
-        std::vector<ObjectExpression> const & components() const { return m_components; }:
+        std::vector<ObjectExpression> & components() { return m_components; };
     private:
-        ObjectExpression const m_composite;
-        std::vector<ObjectExpression> const m_components;
+        ObjectExpression m_composite;
+        std::vector<ObjectExpression> m_components;
 };
 
 #endif // COMPOSITIONRELATIONEXPRESSION_HXX
