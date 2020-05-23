@@ -1,9 +1,9 @@
 #include "generalizationrelationexpression.hxx"
 #include "alias.hxx"
 
-GeneralizationRelationExpression::GeneralizationRelationExpression(ObjectExpression generalization, std::vector<ObjectExpression> elements)
-    : m_gen(std::move(generalization))
-    , m_elems(std::move(elements))
+GeneralizationRelationExpression::GeneralizationRelationExpression(ObjectExpression subject, std::vector<ObjectExpression> generalizations)
+    : m_subject(std::move(subject))
+    , m_gens(std::move(generalizations))
 {}
 
 

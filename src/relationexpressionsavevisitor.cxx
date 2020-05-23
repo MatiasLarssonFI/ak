@@ -10,9 +10,10 @@ RelationExpressionSaveVisitor::RelationExpressionSaveVisitor(DBInstanceManager &
 {}
 
 void RelationExpressionSaveVisitor::visit(GeneralizationRelationExpression & expr) {
+    this->visit(expr.subject());
+    uptr<IDBObject> subject = m_db_inst_man.getDBFactory()->getDBObject(expr.subject());
     for (auto & elem : expr.elements()) {
-        this->visit(elem);
-        m_db_inst_man.getDBFactory()->getDBObject(elem)->addGeneralization(expr.generalization().objectName());
+        subject->addGeneralization(elem.objectName());
     }
 }
 
