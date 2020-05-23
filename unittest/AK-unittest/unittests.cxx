@@ -5,6 +5,8 @@
 #include <algorithm> // find
 
 #include "objecttestfixture.hxx"
+#include "ak_mock.hxx"
+
 #include "alias.hxx"
 #include "dbconfig.hxx"
 #include "idbobject.hxx"
@@ -119,6 +121,39 @@ TEST_FIXTURE(ObjectTestFixture, OBJECT_SAVE_DUPLICATE_ERROR)
         had_exception = true;
     }
     CHECK(had_exception);
+}
+
+
+// parser: one new object
+TEST_FIXTURE(ObjectTestFixture, PARSER_ONE_NEW_OBJECT)
+{
+    uptr<IRelationExpression> expr = m_relexp_parser.fromLine("rocket");
+    REQUIRE CHECK((bool)expr);
+
+    RelationExpressionAssertTypeVisitor visitor{RelationExpressionAssertTypeVisitor::Type::Object};
+    expr->accept(visitor); // will make the CHECK
+}
+
+
+// parser: generalization
+TEST_FIXTURE(ObjectTestFixture, PARSER_GENERALIZATION)
+{
+    uptr<IRelationExpression> expr = m_relexp_parser.fromLine("airplane is vehicle");
+    REQUIRE CHECK((bool)expr);
+
+    RelationExpressionAssertTypeVisitor visitor{RelationExpressionAssertTypeVisitor::Type::Generalization};
+    expr->accept(visitor); // will make the CHECK
+}
+
+
+// parser: composition
+TEST_FIXTURE(ObjectTestFixture, PARSER_COMPOSITION)
+{
+    uptr<IRelationExpression> expr = m_relexp_parser.fromLine("airplane has engine");
+    REQUIRE CHECK((bool)expr);
+
+    RelationExpressionAssertTypeVisitor visitor{RelationExpressionAssertTypeVisitor::Type::Composition};
+    expr->accept(visitor); // will make the CHECK
 }
 
 
