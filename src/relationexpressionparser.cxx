@@ -8,8 +8,8 @@
 #include "compositionrelationexpression.hxx"
 #include "generalizationrelationexpression.hxx"
 
-constexpr char composition_delim[] = "is";
-constexpr char generalization_delim[] = "has";
+constexpr char composition_delim[] = "has";
+constexpr char generalization_delim[] = "is";
 
 RelationExpressionParser::RelationExpressionParser()
 {}
@@ -39,7 +39,7 @@ uptr<IRelationExpression> RelationExpressionParser::fromLine(std::string line) {
                 ObjectExpression subject{std::move(*it)};
                 it += 2;
                 std::vector<ObjectExpression> rhs_operands;
-                std::transform(it, operands.end(), rhs_operands.begin(),
+                std::transform(it, operands.end(), std::back_inserter(rhs_operands),
                                 [](std::string s) -> ObjectExpression { return ObjectExpression(std::move(s)); });
 
                 return delim == composition_delim ? makeExpression<CompositionRelationExpression>(std::move(subject), std::move(rhs_operands))
