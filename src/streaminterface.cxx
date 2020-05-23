@@ -18,7 +18,9 @@ void StreamInterface::listen() {
     std::string line;
     do {
         std::getline(m_in, line);
-        this->lineHandler(line);
+        if (line != "q") {
+            this->lineHandler(std::move(line));
+        }
     } while (line != "q");
 }
 
