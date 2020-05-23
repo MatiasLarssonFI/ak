@@ -6,10 +6,11 @@
 #include "relationexpressionsyntaxerror.hxx"
 #include "relationexpressionsavevisitor.hxx"
 
-StreamInterface::StreamInterface(std::istream& in, std::ostream& out)
+StreamInterface::StreamInterface(std::istream& in, std::ostream& out, DBInstanceManager & db_inst_man)
     : m_in(in)
     , m_out(out)
     , m_relexp_parser()
+    , m_db_inst_man(db_inst_man)
 {}
 
 
@@ -31,7 +32,7 @@ void StreamInterface::listen() {
 // polymorphic IRelationExpressions.
 void StreamInterface::lineHandler(std::string line) {
     try {
-        RelationExpressionSaveVisitor save_visitor;
+        RelationExpressionSaveVisitor save_visitor(m_db_inst_man);
         uptr<IRelationExpression> expr = m_relexp_parser.fromLine(line);
         if (expr) {
             expr->accept(save_visitor);

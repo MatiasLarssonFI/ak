@@ -15,7 +15,8 @@ int main(int argc, char *argv[]) {
     if (argc == 2) {
         try {
             DBConfig::db_filename = argv[1];
-            StreamInterface sif{std::cin, std::cout};
+            DBInstanceManager db_inst_man;
+            StreamInterface sif{std::cin, std::cout, db_inst_man};
             sif.listen();
         } catch (std::exception const & e) {
             errstream << "Error: " << e.what() << std::endl;
