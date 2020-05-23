@@ -36,6 +36,7 @@ void StreamInterface::lineHandler(std::string line) {
         uptr<IRelationExpression> expr = m_relexp_parser.fromLine(line);
         if (expr) {
             expr->accept(save_visitor);
+            m_out << "Saved." << std::endl;
         }
     } catch (RelationExpressionSyntaxError const & e) {
         m_out << "Syntax error: " << e.what() << std::endl;
