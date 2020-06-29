@@ -18,16 +18,16 @@
 					<Add option="-Wunreachable-code" />
 					<Add option="-Wswitch-enum" />
 					<Add option="-pedantic" />
-					<Add option="-std=c++11" />
 					<Add option="-Wextra" />
 					<Add option="-Wall" />
+					<Add option="-std=c++14" />
 					<Add option="-g" />
 					<Add directory="../../src/lib/SQLiteCpp/include" />
 					<Add directory="../../src" />
 				</Compiler>
 				<Linker>
 					<Add option="-lsqlite3" />
-					<Add library="/usr/local/lib/libUnitTest++.a" />
+					<Add option="-lUnitTest++" />
 				</Linker>
 			</Target>
 			<Target title="release">
@@ -39,9 +39,9 @@
 				<Compiler>
 					<Add option="-O2" />
 					<Add option="-pedantic" />
-					<Add option="-std=c++11" />
 					<Add option="-Wextra" />
 					<Add option="-Wall" />
+					<Add option="-std=c++14" />
 					<Add directory="../../src" />
 					<Add directory="../../src/lib/SQLiteCpp/include" />
 				</Compiler>
@@ -57,13 +57,19 @@
 			<Add directory="SQLiteCpp/include/SQLiteCpp" />
 		</Compiler>
 		<Unit filename="../../src/alias.hxx" />
+		<Unit filename="../../src/compositionrelationexpression.cxx" />
+		<Unit filename="../../src/compositionrelationexpression.hxx" />
 		<Unit filename="../../src/dbconfig.cxx" />
 		<Unit filename="../../src/dbconfig.hxx" />
 		<Unit filename="../../src/dbinstancemanager.cxx" />
 		<Unit filename="../../src/dbinstancemanager.hxx" />
+		<Unit filename="../../src/generalizationrelationexpression.cxx" />
+		<Unit filename="../../src/generalizationrelationexpression.hxx" />
 		<Unit filename="../../src/idbcursor.hxx" />
 		<Unit filename="../../src/idbfactory.hxx" />
 		<Unit filename="../../src/idbobject.hxx" />
+		<Unit filename="../../src/irelationexpression.hxx" />
+		<Unit filename="../../src/irelationexpressionvisitor.hxx" />
 		<Unit filename="../../src/lib/SQLiteCpp/include/SQLiteCpp/Assertion.h" />
 		<Unit filename="../../src/lib/SQLiteCpp/include/SQLiteCpp/Backup.h" />
 		<Unit filename="../../src/lib/SQLiteCpp/include/SQLiteCpp/Column.h" />
@@ -79,11 +85,19 @@
 		<Unit filename="../../src/lib/SQLiteCpp/src/Exception.cpp" />
 		<Unit filename="../../src/lib/SQLiteCpp/src/Statement.cpp" />
 		<Unit filename="../../src/lib/SQLiteCpp/src/Transaction.cpp" />
+		<Unit filename="../../src/objectexpression.cxx" />
+		<Unit filename="../../src/objectexpression.hxx" />
+		<Unit filename="../../src/relationexpressionparser.cxx" />
+		<Unit filename="../../src/relationexpressionparser.hxx" />
+		<Unit filename="../../src/relationexpressionsavevisitor.cxx" />
+		<Unit filename="../../src/relationexpressionsavevisitor.hxx" />
+		<Unit filename="../../src/relationexpressionsyntaxerror.hxx" />
 		<Unit filename="../../src/sqlite3dbcursor.hxx" />
 		<Unit filename="../../src/sqlite3dbfactory.cxx" />
 		<Unit filename="../../src/sqlite3dbfactory.hxx" />
 		<Unit filename="../../src/sqlite3dbobject.cxx" />
 		<Unit filename="../../src/sqlite3dbobject.hxx" />
+		<Unit filename="ak_mock.hxx" />
 		<Unit filename="objecttestfixture.cxx" />
 		<Unit filename="objecttestfixture.hxx" />
 		<Unit filename="unittests.cxx" />
